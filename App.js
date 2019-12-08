@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { StyleSheet, Text, View, Image,Button } from 'react-native';
-import textAlimentos from './src/texts/textAlimento';
+import { StyleSheet, Text, View, ScrollView, Image,Button } from 'react-native';
+import { createDrawerNavigator, DrawerActions } from 'react-navigation-drawer';
+
 import styles from './src/styles/stylesText';
+//textos
+import TextHome from './src/texts/textHome';
 import TextAlimentos from './src/texts/textAlimento';
 import TextEstilo from './src/texts/textEstiloVida';
 import TextAtividadeFisica from './src/texts/textAtividaFisica';
 import TextMassa from './src/texts/textPeso';
 import TextSintomas from './src/texts/textSintomas';
 import TextPrevencao from './src/texts/textPrevencao';
+import TextSaudeBucal from './src/texts/textSaudeBucal';
+import TextSexo from './src/texts/textSexo';
+import TextTerapias from './src/texts/textTerapias';
 //import TextTerapias from './src/texts/textTerapias';
 import TextGeral from './src/texts/textGeral';
 
@@ -17,18 +23,65 @@ import TextGeral from './src/texts/textGeral';
 //Otimizar esses imports -- será que tem como declarar tudo num só e chamar e passar parametro?
 
 var auxText = {
-  local: "Sexo"
+  local: 'Sexo'
 }
 
-var varText='Sexo';
-
+var varText="Sexo";
 
 //testar passagem de otherParam em onpress do Button
 class  ChamaTextGeral extends React.Component {
+  state = {
+    nameLocal: auxText.local
+  }
+  static navigationOptions = ({ navigation, navigationOptions }) => {
+    return {
+      title: navigation.getParam('otherParam', auxText.local),
+    };
+  };
   render() {
     return (
       <TextGeral
-      indicadorText={varText}/>
+      state={this.state}
+      />
+    );
+  }
+}
+
+class  ChamaTerapias extends React.Component {
+  static navigationOptions = ({ navigation, navigationOptions }) => {
+    return {
+      title: navigation.getParam('otherParam', 'Terapias'),
+    };
+  };
+  render() {
+    return (
+      <TextTerapias/>
+    );
+  }
+}
+
+class  ChamaSexo extends React.Component {
+  static navigationOptions = ({ navigation, navigationOptions }) => {
+    return {
+      title: navigation.getParam('otherParam', 'Sexo'),
+    };
+  };
+  render() {
+    return (
+      <TextSexo/>
+    );
+  }
+}
+
+class  ChamaSaudeBucal extends React.Component {
+  static navigationOptions = ({ navigation, navigationOptions }) => {
+    return {
+      title: navigation.getParam('otherParam', 'Saúde Bucal'),
+    };
+  };
+  render() {
+    return (
+      <TextSaudeBucal/>
     );
   }
 }
@@ -112,15 +165,13 @@ class ChamaTextAlimentos extends React.Component {
 }
 
 class HomeScreen extends React.Component {
-  static navigationOptions = ({ navigation, navigationOptions }) => {
-    return {
-      title: navigation.getParam('otherParam', 'HomeApp'),
-    };
-  };
   render() {
     return (
+      <ScrollView>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Home Screen</Text>
+        <TextHome/>
+        {/*
         <Button
           title="Go to Details"
           onPress={() => {
@@ -131,13 +182,27 @@ class HomeScreen extends React.Component {
             });
           }}
           color="#B665A0"
-        />
+        />*/}
       </View>
+      </ScrollView>
     );
   }
 }
 
-class DetailsScreen extends React.Component {
+HomeScreen.navigationOptions = {
+  headerStyle: {
+    backgroundColor: '#B665A0',
+
+  },
+  headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+  //leftButtonText: "Menu",
+  //title: "Home"
+};
+
+class CuidadosScreen extends React.Component {
   static navigationOptions = ({ navigation, navigationOptions }) => {
     return {
       title: navigation.getParam('otherParam', 'Cuidados'),
@@ -156,6 +221,7 @@ class DetailsScreen extends React.Component {
         <Text>itemId: {JSON.stringify(itemId)}</Text>
         <Text>otherParam: {JSON.stringify(otherParam)}</Text>
         <View style={styles.buttonStyle} >
+        {/*
         <Button
           title="Go to Details... again"
           onPress={() =>
@@ -175,7 +241,7 @@ class DetailsScreen extends React.Component {
         <Button
           title="Go back"
           onPress={() => this.props.navigation.goBack()}
-        />
+        />*/}
         <Button
           title="Estilo de Vida"
           onPress={() => this.props.navigation.navigate('TextMostraEstilo')}
@@ -188,7 +254,6 @@ class DetailsScreen extends React.Component {
           String var_aux = 'ser' 
           onPress={() => this.props.navigation.navigate('TextMostraAtividadeFisica')}
           color="#B665A0"
-          
         />
          <Button
           title="Massa Corporal"
@@ -211,6 +276,21 @@ class DetailsScreen extends React.Component {
           color="#B665A0"
         />
         <Button
+          title="Saúde Bucal"
+          onPress={() => this.props.navigation.navigate('TextMostraSaudeBucal')}
+          color="#B665A0"
+        />
+        <Button
+          title="Sexo"
+          onPress={() => this.props.navigation.navigate('TextMostraSexo')}
+          color="#B665A0"
+        />
+        <Button
+          title="Terapias"
+          onPress={() => this.props.navigation.navigate('TextMostraTerapias')}
+          color="#B665A0"
+        />
+        <Button
           title="Geral"
           onPress={() => this.props.navigation.navigate('TextMostraGeral')}
           color="#B665A0"
@@ -223,18 +303,21 @@ class DetailsScreen extends React.Component {
 
 const RootStack = createStackNavigator(
   {
-    Home: HomeScreen,
-    Cuidados: DetailsScreen,
+    //Home: HomeScreen,
+    Cuidados: CuidadosScreen,
     TextMostraAlimentos: ChamaTextAlimentos,
     TextMostraEstilo: ChamaTextEstiloVida,
     TextMostraAtividadeFisica: ChamaAtividadeFisica,
     TextMostraMassaCorporal: ChamaMassaCorporal,
     TextMostraSintomas: ChamaSintomas,
     TextMostraPrevencao: ChamaPrevencao,
+    TextMostraSaudeBucal: ChamaSaudeBucal,
     TextMostraGeral: ChamaTextGeral,
+    TextMostraSexo: ChamaSexo,
+    TextMostraTerapias: ChamaTerapias,
   },
   {
-    initialRouteName: 'Home',
+    //initialRouteName: 'Home',
     // The header config from HomeScreen is now here
     defaultNavigationOptions: {
       headerStyle: {
@@ -249,6 +332,20 @@ const RootStack = createStackNavigator(
   }
 );
 
-const App = createAppContainer(RootStack);
+const AppNavigator = createDrawerNavigator({
+  Home: HomeScreen,
+  Cuidados: RootStack,
+  //Falta Diário 
+},{
+  drawerBackgroundColor: 'rgba(255,255,255,.9)',
+    contentOptions: {
+      activeTintColor: '#fff',
+      activeBackgroundColor: '#B665A0',
+    },
+}
+);
+
+const App = createAppContainer(AppNavigator);
+//const App = createAppContainer(RootStack);
 export default App;
 

@@ -6,19 +6,24 @@ import TextSaudeBucal from './textSaudeBucal';
 import TextTerapias from './textTerapias';
 //expot em App e chamar tela no Button Cuidados
 
-const TextGeral = (indicadorText) => {
-    if (indicadorText === 'Sexo'){
+const TextGeral = (state) => {
+    const ind = state.nameLocal;
+    if (ind === 'Sexo'){
     return (
         <TextSexo/>
       );
     }
-    else if (indicadorText === 'Saúde Bucal') {
+    else if (ind === 'Saúde Bucal') {
         return (
             <TextSaudeBucal/>
         );
     } else {
         return (
+            <View>
+                <Text>{JSON.stringify(state.nameLocal)}</Text>
+            <Text>{JSON.stringify(ind)}</Text>
             <TextTerapias/>
+            </View>
         );
     } 
       
