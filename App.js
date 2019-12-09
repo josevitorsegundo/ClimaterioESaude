@@ -217,9 +217,10 @@ class CuidadosScreen extends React.Component {
     
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', fontSize: '20' }}>
+        {/*
         <Text>Cuidados</Text>
         <Text>itemId: {JSON.stringify(itemId)}</Text>
-        <Text>otherParam: {JSON.stringify(otherParam)}</Text>
+        <Text>otherParam: {JSON.stringify(otherParam)}</Text>*/}
         <View style={styles.buttonStyle} >
         {/*
         <Button
