@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ScrollView, Image, Dimensions } from 'react-native';
 import styles from '../styles/stylesText';
 //expot em App e chamar tela no Button Cuidados
 
 const TextHome = () => {
+    var {height, width} = Dimensions.get('window')
     return (
         <ScrollView>
-        <View style={styles.container}>
+        <View style={styles.container + { height: height, width: width }}>
         <Text style={styles.textoTitulo}>O que é climatério? </Text>
             <Text style={styles.textoSubtitulo}>O climatério é a passagem da fase reprodutiva para a não 
             reprodutiva e acontece normalmente entre os 40 e 65 anos. É um período natural que faz parte do 
@@ -26,6 +27,18 @@ const TextHome = () => {
             <Text style={styles.textoSubtitulo}>Como nas demais fases da vida, o climatério pode ser vivido 
             de forma saudável, produtiva e feliz a partir da adoção de estilo de vida saudável e da decisão de 
             ver essa fase da vida de forma positiva, resignificando esse momento (BRASIL, 2016).  </ Text>
+           
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Image style={{width: 100, height: 100}} source={require('../images/togepi.png')} /> 
+            
+            {/*<Image style={{width: 100, height: 100}} 
+                source={require('../images/alimentos.png')}> 
+                <Text>FIGURA: Representação gráfica de alimentos in natura, alimentos processados 
+                    e alimentos ultra processados, (Fonte: BRASIL, 2014)</Text>
+            </Image>   */}           
+            
+            </View>
+
         </View>
         </ScrollView>
       );

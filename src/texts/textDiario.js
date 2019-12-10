@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
-import { Text, View, ScrollView, TextInput, TouchableOpacity, Dimensions, Button } from 'react-native';
+import { Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import styles from '../styles/stylesText';
-//import { TextInput } from 'react-native-gesture-handler';
+//Funcionalidade 1: ter alarme com data
+//Funcionalidade 2: ter diário para escrever
 
-//const TextMassa = () => {
-class TextMassa extends Component {
+class TextDiario extends Component {
   
   state ={
   altura: 0,
@@ -15,13 +15,12 @@ class TextMassa extends Component {
   };
 
   handleCalculate = () => {
-  if (this.state.altura != 0 && this.state.massa != 0) {
-  //if (this.state.massa != 0){  
-  let imc = (this.state.massa)/ (this.state.altura * this.state.altura); // verificar condição
+  let imc = (this.state.massa)/ (this.state.altura * this.state.altura);
   this.setState({
     resultadoNumero: imc.toFixed(2)
   });
-    if (imc < 24.9){
+
+  if (imc < 24.9){
     this.setState({ resultadoTexto:
     "Adequado"});
     } else if (imc > 24.9 && imc < 29.99){
@@ -34,14 +33,8 @@ class TextMassa extends Component {
      this.setState( { resultadoTexto: 
         "Abaixo"})
     }
- // }
-    } else{
-      this.setState( { resultadoTexto: 
-        "ERROR"})
     }
-   }
     render(){
-      var {height, widht} = Dimensions.get('window')
     return (
       <ScrollView>
       <View style={styles.container}>
@@ -53,41 +46,31 @@ class TextMassa extends Component {
         <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado insira:</Text>
         
         <Text style={styles.textoSubtitulo}>Clique abaixo e insira sua altura e massa respectivamente: </Text>
-        <View style={{padding:10}}>
-        <TextInput
+        <TextInput style = {{ justifyContent: "center"}}
           placeholder="Altura (exemplo: 1.53)"
           keyboardType="numeric"
-          style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#B665A0'}}
+          style={{textAlign: "center", fontSize: 24}}
           onChangeText={altura => {this.setState({ altura });}}
           />
-          <TextInput
+          
+        <TextInput style = {{justifyContent: "center"}}
               placeholder="Massa (exemplo: 50.5)"
               keyboardType="numeric"
-              style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#B665A0'}}
+              style={{textAlign: "center", fontSize: 24}}
               onChangeText={massa => {
                 this.setState({ massa });
               }}
             />
-          {/*
+
+          <View style={styles.resultadoStyle}>
           <TouchableOpacity
             //style={styles.button}
             onPress={this.handleCalculate}
           >
-          <Text style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#B665A0',
-              textShadowColor:'#B665A0' }}>Calcular </Text>
-          </TouchableOpacity>*/}
-        
-        </View>
-
-        <Button
-          title="Calcular"
-          onPress={this.handleCalculate}
-          color="#B665A0"
-        />
-
-          <View>
-          <Text style={{textAlign: "center", fontSize: 20}}>{this.state.resultadoNumero}</Text>
-          <Text style={{textAlign: "center", fontSize: 20}}>
+          <Text>Calcular </Text>
+          </TouchableOpacity>
+          <Text >{this.state.resultadoNumero}</Text>
+          <Text>
             {this.state.resultadoTexto}
           </Text>
           </View>
@@ -109,4 +92,4 @@ class TextMassa extends Component {
     }
 }
 
-export default TextMassa;
+export default TextDiario;

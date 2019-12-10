@@ -9,6 +9,9 @@ import styles from '../styles/stylesText';
 
 
 const TextPrevencao = () => {
+    webkitURL = "www.google.com";
+    
+    
     return (
         <ScrollView>
         <View style={styles.container}>
@@ -84,7 +87,10 @@ const TextPrevencao = () => {
             <Text style={styles.textoSubtitulo}>• Conheça e pratique exercícios que auxiliam no fortalecimento 
             muscular, alongamento e melhoram o equilíbrio na Cartilha da Sociedade Brasileira de Reumatologia 
             que está disponível no link: </ Text>
-            <Text style={styles.textoSubtitulo}>https://www.reumatologia.org.br/download/osteoporose/</ Text>
+
+                
+            <Text onPress={null} style={styles.textoSubtitulo}>https://www.reumatologia.org.br/download/osteoporose/</ Text>
+            
             <Text style={styles.textoTitulo}>Como é feito o diagnóstico da osteoporose?</ Text>
             <Text style={styles.textoSubtitulo}>A densidade mineral óssea (DMO) avalia a força e qualidade dos 
             ossos, também estima seu risco de fratura. Este exame deve ser realizado por todas as mulheres com 

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { StyleSheet, Text, View, ScrollView, Image,Button } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, Button, YellowBox } from 'react-native';
 import { createDrawerNavigator, DrawerActions } from 'react-navigation-drawer';
-
+YellowBox.ignoreWarnings(['Accessing view manager'])
+//sytles do Texto
 import styles from './src/styles/stylesText';
-//textos
+//texto -- Home
 import TextHome from './src/texts/textHome';
+//textos -- Cuidados
 import TextAlimentos from './src/texts/textAlimento';
 import TextEstilo from './src/texts/textEstiloVida';
 import TextAtividadeFisica from './src/texts/textAtividaFisica';
@@ -16,32 +18,39 @@ import TextPrevencao from './src/texts/textPrevencao';
 import TextSaudeBucal from './src/texts/textSaudeBucal';
 import TextSexo from './src/texts/textSexo';
 import TextTerapias from './src/texts/textTerapias';
-//import TextTerapias from './src/texts/textTerapias';
+//texto -- Diário
+import TextDiario from './src/texts/textDiario';
+//Aqui para teste de otimização
 import TextGeral from './src/texts/textGeral';
 
 //terminar os imports dos textos -- chamar textPeso e alterar textSintomas e textSintomas
 //Otimizar esses imports -- será que tem como declarar tudo num só e chamar e passar parametro?
 
-var auxText = {
-  local: 'Sexo'
+auxText = {
+  local: ''
 }
 
-var varText="Sexo";
+var auxLocal='Sexo';
 
 //testar passagem de otherParam em onpress do Button
 class  ChamaTextGeral extends React.Component {
-  state = {
-    nameLocal: auxText.local
-  }
-  static navigationOptions = ({ navigation, navigationOptions }) => {
+  
+  static navigationOptions = ({ navigationG }) => {
     return {
-      title: navigation.getParam('otherParam', auxText.local),
+      title: navigationG.getParam('paramTest', ''),
+      //title: navigationG.getParam('paramTest', 'Sexo'), //
     };
   };
+
   render() {
+    const { navigationG } = this.props; //
+    const paramTest = navigationG.getParam('paramTest', ''); //
+    
     return (
       <TextGeral
-      state={this.state}
+      //ind={'Saúde Bucal'}
+      //ind={auxLocal}
+      ind={paramTest} //
       />
     );
   }
@@ -164,12 +173,14 @@ class ChamaTextAlimentos extends React.Component {
   }
 }
 
-class HomeScreen extends React.Component {
+class HomePage extends React.Component {
+  static navigationOptions = {
+    title: 'Home',
+  };
   render() {
     return (
       <ScrollView>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
         <TextHome/>
         {/*
         <Button
@@ -189,20 +200,7 @@ class HomeScreen extends React.Component {
   }
 }
 
-HomeScreen.navigationOptions = {
-  headerStyle: {
-    backgroundColor: '#B665A0',
-
-  },
-  headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-  //leftButtonText: "Menu",
-  //title: "Home"
-};
-
-class CuidadosScreen extends React.Component {
+class CuidadosPage extends React.Component {
   static navigationOptions = ({ navigation, navigationOptions }) => {
     return {
       title: navigation.getParam('otherParam', 'Cuidados'),
@@ -292,8 +290,14 @@ class CuidadosScreen extends React.Component {
           color="#B665A0"
         />
         <Button
+          auxLocal='Sexo'
           title="Geral"
-          onPress={() => this.props.navigation.navigate('TextMostraGeral')}
+          //onPress={() => this.props.navigation.navigate('TextMostraGeral')}
+          onPress={() => {
+            this.props.navigationG.navigate('TextMostraGeral', { 
+              paramTest: 'Saúde Bucal',
+            });
+          }}
           color="#B665A0"
         />
         </View>
@@ -302,10 +306,27 @@ class CuidadosScreen extends React.Component {
   }
 }
 
-const RootStack = createStackNavigator(
+const RootStackH = createStackNavigator(
   {
-    //Home: HomeScreen,
-    Cuidados: CuidadosScreen,
+    Home: HomePage,
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#B665A0',
+
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  }
+);
+
+const RootStackC = createStackNavigator(
+  {
+    Cuidados: CuidadosPage,
     TextMostraAlimentos: ChamaTextAlimentos,
     TextMostraEstilo: ChamaTextEstiloVida,
     TextMostraAtividadeFisica: ChamaAtividadeFisica,
@@ -313,13 +334,12 @@ const RootStack = createStackNavigator(
     TextMostraSintomas: ChamaSintomas,
     TextMostraPrevencao: ChamaPrevencao,
     TextMostraSaudeBucal: ChamaSaudeBucal,
-    TextMostraGeral: ChamaTextGeral,
     TextMostraSexo: ChamaSexo,
     TextMostraTerapias: ChamaTerapias,
+    TextMostraGeral: ChamaTextGeral,
   },
   {
-    //initialRouteName: 'Home',
-    // The header config from HomeScreen is now here
+    // The header config
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: '#B665A0',
@@ -334,14 +354,15 @@ const RootStack = createStackNavigator(
 );
 
 const AppNavigator = createDrawerNavigator({
-  Home: HomeScreen,
-  Cuidados: RootStack,
+  Home: RootStackH,
+  Cuidados: RootStackC,
   //Falta Diário 
 },{
   drawerBackgroundColor: 'rgba(255,255,255,.9)',
     contentOptions: {
       activeTintColor: '#fff',
       activeBackgroundColor: '#B665A0',
+      inactiveTintColor: '#B665A0',
     },
 }
 );

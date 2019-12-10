@@ -18,10 +18,14 @@ const styles = StyleSheet.create({
       paddingRight: 30,
       color: 'black',
       fontSize: 15,
+      textAlign: 'justify',
     },
     buttonStyle:{
       margin: 20,
       justifyContent: 'space-between',
+    },
+    resultadoStyle:{
+      justifyContent: 'center',
     },
   });
 

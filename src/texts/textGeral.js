@@ -6,26 +6,30 @@ import TextSaudeBucal from './textSaudeBucal';
 import TextTerapias from './textTerapias';
 //expot em App e chamar tela no Button Cuidados
 
-const TextGeral = (state) => {
-    const ind = state.nameLocal;
-    if (ind === 'Sexo'){
+const TextGeral = ({ind}) => {
+//class TextGeral extends React.Component {  
+    
+  //  render() {
+    
+    //ind = 'Sexo' 
+    //ind = {ind}   
+    if (ind == 'Sexo'){
     return (
         <TextSexo/>
       );
     }
-    else if (ind === 'Saúde Bucal') {
+    else if (ind == 'Saúde Bucal') {
         return (
             <TextSaudeBucal/>
         );
     } else {
         return (
             <View>
-                <Text>{JSON.stringify(state.nameLocal)}</Text>
-            <Text>{JSON.stringify(ind)}</Text>
             <TextTerapias/>
             </View>
         );
     } 
+    //}
       
   }
 
