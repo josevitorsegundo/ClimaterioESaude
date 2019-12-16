@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { createAppContainer } from 'react-navigation';
-import { Text, View, ScrollView } from 'react-native';
+import { View } from 'react-native';
+//Import dos Textos
 import TextAlimentos from './textAlimento';
 import TextEstilo from './textEstiloVida';
 import TextAtividadeFisica from './textAtividaFisica';
@@ -10,7 +10,6 @@ import TextPrevencao from './textPrevencao';
 import TextSaudeBucal from './textSaudeBucal';
 import TextSexo from './textSexo';
 import TextTerapias from './textTerapias';
-//expot em App e chamar tela no Button Cuidados
 
 const TextGeral = ({ind}) => {
     const tela = (

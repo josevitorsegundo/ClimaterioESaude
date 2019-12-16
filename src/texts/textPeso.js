@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { createAppContainer } from 'react-navigation';
 import { Text, View, ScrollView, TextInput, TouchableOpacity, Dimensions, Button } from 'react-native';
 import styles from '../styles/stylesText';
 //import { TextInput } from 'react-native-gesture-handler';

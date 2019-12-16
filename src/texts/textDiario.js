@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { createAppContainer } from 'react-navigation';
 import { Text, View, ScrollView, TextInput, Dimensions, Button, Icon } from 'react-native';
 import styles from '../styles/stylesText';
 import {AsyncStorage} from 'react-native';
@@ -26,7 +25,7 @@ class TextDiario extends Component {
   };
   verifLengthText = (text) =>{
     this.setState({ entrada: text })
-    if(String(text).length === 10){
+    if(String(text).length === 200){
       alert("Tamanho Maximo Atingido")
     }else{
       var pages = this.state.pages
@@ -144,7 +143,7 @@ _retrieveData = async () => {
           
           <TextInput
           multiline={true}
-          maxLength={20}
+          maxLength={200}
           placeholder="Digite aqui"
           defaultValue={this.state.pages[this.state.page].info}
           keyboardType="default"
@@ -184,7 +183,7 @@ _retrieveData = async () => {
           onPress={()=>this._storeData()}
           color="#B665A0"
           />
-
+          
           <Button
           title="Mostrar"
           onPress={()=>this._retrieveData()}

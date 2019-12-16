@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { createAppContainer } from 'react-navigation';
 import { Text, View, ScrollView, Image, Dimensions } from 'react-native';
 import styles from '../styles/stylesText';
 //expot em App e chamar tela no Button Cuidados
