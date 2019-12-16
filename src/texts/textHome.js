@@ -8,7 +8,9 @@ const TextHome = () => {
     var {height, width} = Dimensions.get('window')
     return (
         <ScrollView>
+            
         <View style={styles.container + { height: height, width: width }}>
+        
         <Text style={styles.textoTitulo}>O que é climatério? </Text>
             <Text style={styles.textoSubtitulo}>O climatério é a passagem da fase reprodutiva para a não 
             reprodutiva e acontece normalmente entre os 40 e 65 anos. É um período natural que faz parte do 

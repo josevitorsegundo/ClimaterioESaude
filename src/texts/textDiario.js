@@ -1,95 +1,199 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
-import { Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { Text, View, ScrollView, TextInput, Dimensions, Button, Icon } from 'react-native';
 import styles from '../styles/stylesText';
-//Funcionalidade 1: ter alarme com data
-//Funcionalidade 2: ter diário para escrever
+import {AsyncStorage} from 'react-native';
+
+//Funcionalidade 1: ter alarme com data definida pelo usuário
+//Funcionalidade 2: ter diário para escrever de acordo com definido pelo usuário
 
 class TextDiario extends Component {
-  
+ 
   state ={
-  altura: 0,
-  massa: 0,
-  resultadoNumero: 0,
-  resultadoTexto: ""
+    entradaTest:'Tem algo aqui',
+    entrada: '',
+    massa: 0,
+    resultadoNumero: 0,
+    resultadoTexto: "",
+    limite: null,
+    page: 0,
+    pageTest: ['Valor 1','Valor 2'],
+    pages: [
+      {
+        info: 'Aqui jaz meu diario'
+      }
+    ],
   };
+  verifLengthText = (text) =>{
+    this.setState({ entrada: text })
+    if(String(text).length === 10){
+      alert("Tamanho Maximo Atingido")
+    }else{
+      var pages = this.state.pages
+      pages[this.state.page].info = text
+      this.setState({
+        pages: pages        
+      })
+    }
+  }
+  
+  _storeData = async () => {
+    try {
+      var i = 0
+      while (true){
+        const value = await AsyncStorage.getItem('pages' + i);
+        if (value !== null) {
+          AsyncStorage.removeItem('pages' + i)
+          i += 1
+        }else{
+          break
+        }
+      }
+    } catch (error) {
+      console.log('error no deletar')
+    }
+    try{
+      console.log(this.state.pages)
+      for(i in this.state.pages){
+        if(this.state.pages[i].info == ''){
+          await AsyncStorage.setItem('pages' + i,"nill");
+        }else{
+          await AsyncStorage.setItem('pages' + i,this.state.pages[i].info);
+        }
+        console.log(this.state.pages[i].info)
+      }
+      console.log('salvo')
+    } catch (error){
+      console.log('error no salvar')
+    }
+}
 
-  handleCalculate = () => {
-  let imc = (this.state.massa)/ (this.state.altura * this.state.altura);
-  this.setState({
-    resultadoNumero: imc.toFixed(2)
-  });
-
-  if (imc < 24.9){
-    this.setState({ resultadoTexto:
-    "Adequado"});
-    } else if (imc > 24.9 && imc < 29.99){
-      this.setState({ resultadoTexto: 
-      "Sobrepeso"});
-    } else if (imc>=30){
-       this.setState( { resultadoTexto: 
-      "Obesidade"})
+_retrieveData = async () => {
+    try {
+      var list = [], i = 0
+      while (true){
+        const value = await AsyncStorage.getItem('pages' + i);
+        if (value !== null) {
+          if(value == 'nill'){
+            list[i] = {info: ''}
+          }else{
+            list[i] = {info: value}
+          }
+          i += 1
+          console.log(value);
+        }else{
+          break
+        }
+      }
+      this.setState({
+        pages: list,
+        page: 0
+      })
+    } catch (error) {
+      // Error retrieving data
+      console.log('error no receber')
+    }
+  };
+  
+  backOrNext = (textChoice) =>{
+    if(textChoice){
+      if(this.state.pages.length > this.state.page+1){
+        this.setState({
+          page: this.state.page + 1
+        })
+      }
     } else {
-     this.setState( { resultadoTexto: 
-        "Abaixo"})
+      if(0 < this.state.page){
+        this.setState({
+          page: this.state.page - 1
+        })
+      }
     }
+  }
+  addPage = () =>{
+    var pages = this.state.pages
+    pages[pages.length] = {info : ''}
+    this.setState({
+      pages: pages
+    })
+  }
+  remPage = () =>{
+    var pages = this.state.pages
+    if(pages.length > 1){
+      var i = this.state.page
+      while(i < pages.length-2){
+        pages[i] = pages[i+1]
+        i += 1
+      }
+      this.setState({
+        pages: pages
+      })
+      pages.pop()
+      console.log(pages)
     }
-    render(){
+  }
+  componentDidMount = async() =>{
+    this._retrieveData()
+  }
+  render(){
+    var {heigt, width} = Dimensions.get("window");
     return (
       <ScrollView>
-      <View style={styles.container}>
-        <Text style={styles.textoTitulo}>Manutenção do peso normal: prevenindo sobrepeso e obesidade </Text>
-        <Text style={styles.textoSubtitulo}>Durante o envelhecimento feminino ocorre redução do metabolismo. 
-          No climatério o ganho de peso chega a 800 gramas por ano, podendo haver um aumento de 20% na gordura 
-          corporal. Manter-se ativa ou em movimento colabora para a aceleração do metabolismo e diminue o ganho 
-          de peso (BRASIL, 2010).</Text>
-        <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado insira:</Text>
-        
-        <Text style={styles.textoSubtitulo}>Clique abaixo e insira sua altura e massa respectivamente: </Text>
-        <TextInput style = {{ justifyContent: "center"}}
-          placeholder="Altura (exemplo: 1.53)"
-          keyboardType="numeric"
-          style={{textAlign: "center", fontSize: 24}}
-          onChangeText={altura => {this.setState({ altura });}}
-          />
+      <View style={styles.container + {width:width}}>
+          <Text style={styles.textoTitulo}>Escreva aqui o seu diário: </Text>
           
-        <TextInput style = {{justifyContent: "center"}}
-              placeholder="Massa (exemplo: 50.5)"
-              keyboardType="numeric"
-              style={{textAlign: "center", fontSize: 24}}
-              onChangeText={massa => {
-                this.setState({ massa });
-              }}
+          <TextInput
+          multiline={true}
+          maxLength={20}
+          placeholder="Digite aqui"
+          defaultValue={this.state.pages[this.state.page].info}
+          keyboardType="default"
+          style={{textAlignVertical: "top", fontSize: 20, borderWidth: 1, borderColor: '#B665A0', minHeight: 200 }}
+          onChangeText={entrada=> this.verifLengthText(entrada)}
+          />
+
+          <View style={{flexDirection:"row"}}>
+            <Button
+            title="<-"
+            
+            onPress={() => this.backOrNext(false)}
+            color="#B665A0"
             />
+            <Button
+            title="Adicionar pagina"
 
-          <View style={styles.resultadoStyle}>
-          <TouchableOpacity
-            //style={styles.button}
-            onPress={this.handleCalculate}
-          >
-          <Text>Calcular </Text>
-          </TouchableOpacity>
-          <Text >{this.state.resultadoNumero}</Text>
-          <Text>
-            {this.state.resultadoTexto}
-          </Text>
+            onPress={() => this.addPage()}
+            color="#B665A0"
+            />
+            <Text style={{paddingHorizontal: 5, fontSize:25, backgroundColor: "#B665A0", color: "#FFFFFF"}}>{this.state.page + 1}</Text>
+            <Button
+            title="Remover pagina"
+       
+            onPress={() => this.remPage()}
+            color="#B665A0"
+            />
+            <Button
+            title="->"
+          
+            onPress={() => this.backOrNext(true)}
+            color="#B665A0"
+            />
           </View>
+          <Button
+          title="Salvar"
+          onPress={()=>this._storeData()}
+          color="#B665A0"
+          />
 
-          <Text style={styles.textoSubtitulo}>* ISERIR TABELA IMC DO ARQUIVO COMO IMAGEM. </Text>
-           <Text style={styles.textoSubtitulo}>- A medida da circunferência abdominal (medida da cintura), 
-           permite conhecer o risco de desenvolver doenças do coração e diabetes. </ Text>
-           <Text style={styles.textoSubtitulo}>* Colocar figuras demonstrando como medir a circunferência 
-           abdominal </ Text>
-           <Text style={styles.textoSubtitulo}>INSERIR TABELA CIRCUNFERÊNCIA COMO IMAGEM</Text>
-           <Text style={styles.textoSubtitulo}>• As mulheres acima do peso ( índice de massa corporal (IMC) 
-           de 25 a 29,9 kg/m²), devem realizar um mínimo de 60 a 90 minutos de atividade física moderada, 
-           preferencialmente todos os dias da semana (LEE, et al., 2017). </ Text>
-           <Text style={styles.textoSubtitulo}>• Mulheres obesas devem realizar 300 minutos de atividade física 
-           por semana para reduzir a gordura corporal total, (FRIEDENREICH, et al., 2015). </ Text>
+          <Button
+          title="Mostrar"
+          onPress={()=>this._retrieveData()}
+          color="#B665A0"
+          />
       </View>
       </ScrollView>
-      );
-    }
+    );
+  }
 }
 
 export default TextDiario;
