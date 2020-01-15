@@ -30,14 +30,10 @@ const TextHome = () => {
             ver essa fase da vida de forma positiva, resignificando esse momento (BRASIL, 2016).  </ Text>
            
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 100, height: 100}} source={require('../images/togepi.png')} /> 
             
-            {/*<Image style={{width: 100, height: 100}} 
-                source={require('../images/alimentos.png')}> 
-                <Text>FIGURA: Representação gráfica de alimentos in natura, alimentos processados 
+            <Image style={{width: 100, height: 100}} source={require('../images/alimentos2.png')}/>
+            <Text style = {styles.textoLegenda}>FIGURA: Representação gráfica de alimentos in natura, alimentos processados 
                     e alimentos ultra processados, (Fonte: BRASIL, 2014)</Text>
-            </Image>   */}           
-            
             </View>
 
         </View>

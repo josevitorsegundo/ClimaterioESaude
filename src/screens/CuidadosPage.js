@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, Button } from 'react-native';
 import styles from '../styles/stylesText';
 
+import ChamaTextGeral from './ChamaTextGeral';
+
 class CuidadosPage extends React.Component {
     static navigationOptions = ({ navigation, navigationOptions }) => {
       return {

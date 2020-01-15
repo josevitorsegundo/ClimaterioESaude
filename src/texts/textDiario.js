@@ -9,17 +9,17 @@ import {AsyncStorage} from 'react-native';
 class TextDiario extends Component {
  
   state ={
-    entradaTest:'Tem algo aqui',
+    //entradaTest:'Tem algo aqui',
     entrada: '',
-    massa: 0,
-    resultadoNumero: 0,
-    resultadoTexto: "",
+    //massa: 0,
+    //resultadoNumero: 0,
+    //resultadoTexto: "",
     limite: null,
     page: 0,
-    pageTest: ['Valor 1','Valor 2'],
+    //pageTest: ['Valor 1','Valor 2'],
     pages: [
       {
-        info: 'Aqui jaz meu diario'
+        info: 'Seu diário'
       }
     ],
   };
