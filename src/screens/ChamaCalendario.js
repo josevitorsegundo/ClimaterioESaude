@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import {View, Text, Button, Image} from 'react-native';
-import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
+import {Calendar, CalendarList, Agenda, LocaleConfig} from 'react-native-calendars';
 //import { createStackNavigator } from 'react-navigation-stack';
 
 //import dos diario
 //import ChamaDiario from '../screens/ChamaDiario';
+
+LocaleConfig.locales['pt'] = {
+    monthNames: ['Janeiro','Fevereiro','Março','Abril','Mai','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+    dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb']
+};
+
+LocaleConfig.defaultLocale = 'pt';
 
 import TextDiario from '../texts/textDiario';
 
