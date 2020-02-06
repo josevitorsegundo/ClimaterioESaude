@@ -5,7 +5,7 @@ import TextHome from '../texts/textHome';
 class HomePage extends React.Component {
     static navigationOptions = {
       
-      title: 'Home',
+      title: 'Climatério',
       
     };
     render() {

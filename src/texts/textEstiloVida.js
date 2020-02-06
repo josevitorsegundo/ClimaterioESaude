@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ScrollView, Image } from 'react-native';
 import styles from '../styles/stylesText';
 
 const TextEstilo = () => {
       return (
         <ScrollView>
+        
         <View style={styles.container}>
-          <Text style={styles.textoSubtitulo}>Durante o climatério é fundamental adotar um estilo de vida 
-          saudável. Pratique atividade física regularmente, prefira alimentação saudável e adote cuidados com o 
-          sono. Estas atitudes ajudam a diminuir os sintomas que podem alterar a sua qualidade de vida nesse 
-          período.</Text>
+        
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/imagem2.jpg')}/>
+            </View>
+            
+          <Text style={styles.textoTitulo}>Estilo de vida saudável </Text>
+          <Text style={styles.textoSubtitulo}>Durante o climatério, é fundamental adotar um estilo 
+          de vida saudável. Estas atitudes ajudam a diminuir os sintomas que podem alterar a sua 
+          qualidade de vida nesse período (BRASIL, 2016):</Text>
+
+          <Text style={styles.textoTitulo}>•	Pratique atividade física regularmente </Text>
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/imagem3.jpg')}/>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/imagem4.jpg')}/>
+            </View>
+          
           <Text style={styles.textoTitulo}>Alguns cuidados para ter um sono saudável no climatério </Text>
           <Text style={styles.textoSubtitulo}>A necessidade de sono varia de uma pessoa para outra e muda com 
           a idade. Recomenda-se que adultos e pessoas com mais de 50 anos durmam de sete a oito horas por dia. 

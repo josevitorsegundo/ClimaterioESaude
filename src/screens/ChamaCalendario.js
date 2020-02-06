@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, Image} from 'react-native';
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 //import { createStackNavigator } from 'react-navigation-stack';
 
 //import dos diario
 //import ChamaDiario from '../screens/ChamaDiario';
 
+import TextDiario from '../texts/textDiario';
+
 class ChamaCalendario extends React.Component {
     static navigationOptions = ({ navigation, navigationOptions }) => {
         return {
           //title: navigation.getParam('otherParam', 'Calendário'),
-            title: 'Calendário',
-            headerRight: (
-                <Button
-                  //onPress={() => this.props.goBack('DrawerNavigatorF1')}
-                  //DrawerNavigatorF1
-                  title="Info"
-                  color="#fff"
-                />
-            ),
+            title: 'Diário',
         };
       };
     render(){
@@ -35,12 +29,16 @@ class ChamaCalendario extends React.Component {
             monthFormat={'MMM yyyy'}
             onDayPress={day => {
                 //alert('Clicastes \n'+day.day)
-                
-                this.props.navigation.navigate('Diario');//navegar para uma tela Stack de escolha Diário ou Sentimentos
-               // <Button title='aperta'/>
+
+                //navegar para uma tela Stack de escolha Diário ou Sentimentos -- check button
+               
+               this.props.navigation.navigate('Notas');
+               // <TextDiario/>
+               
+                // <Button title='aperta'/>
                
                 // <ChamaDiario/>
-                console.log('selected day', day);
+                //console.log('selected day', day);
             }}
             />
             </View>

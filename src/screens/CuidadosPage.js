@@ -5,9 +5,9 @@ import styles from '../styles/stylesText';
 import ChamaTextGeral from './ChamaTextGeral';
 
 class CuidadosPage extends React.Component {
-    static navigationOptions = ({ navigation, navigationOptions }) => {
+    static navigationOptions = ({ navigation }) => {
       return {
-        title: navigation.getParam('otherParam', 'Cuidados'),
+        title: navigation.getParam('otherParam', 'AppClimatério'),
       };
     };
   
@@ -20,6 +20,11 @@ class CuidadosPage extends React.Component {
       return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', fontSize: '20' }}>
           <View style={styles.buttonStyle} >
+          <Button
+            title="Climatério"
+            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Climatério'})}
+            color="#B665A0"
+          />
           <Button
             title="Estilo de Vida"
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Estilo de Vida'})}
@@ -64,6 +69,12 @@ class CuidadosPage extends React.Component {
           <Button
             title="Terapias"
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Terapias'})}
+            color="#B665A0"
+          />
+          <Button
+            title="Diário"
+            onPress={() => this.props.navigation.navigate('Diário')}
+            //onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Terapias'})}
             color="#B665A0"
           />
           </View>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 //Import dos Textos
+import TextHome from './textHome';
 import TextAlimentos from './textAlimento';
 import TextEstilo from './textEstiloVida';
 import TextAtividadeFisica from './textAtividaFisica';
@@ -22,6 +23,8 @@ const TextGeral = ({ind}) => {
       ind === 'Alimentação'  ? <TextAlimentos/> : 
       ind === 'Atividade Física' ? <TextAtividadeFisica/> :
       ind === 'Estilo de Vida' ? <TextEstilo/> :
+      ind === 'Climatério' ? <TextHome/> :
+      //ind === 'Diário' ? this.props.navigation.navigate('Diário') :
         null
     )
      return(
