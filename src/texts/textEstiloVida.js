@@ -18,7 +18,7 @@ const TextEstilo = () => {
           <Text style={styles.textoSubtitulo}>Durante o climatério, é fundamental adotar um estilo 
           de vida saudável. Estas atitudes ajudam a diminuir os sintomas que podem alterar a sua 
           qualidade de vida nesse período (BRASIL, 2016):</Text>
-
+          {/* 
           <Text style={styles.textoTitulo}>•	Pratique atividade física regularmente </Text>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
@@ -43,6 +43,7 @@ const TextEstilo = () => {
             <Text style={styles.textoSubtitulo}>• Mantenha o quarto escuro e silencioso à noite</Text>
             <Text style={styles.textoSubtitulo}>• Se houver necessidade de levanta- se à noite, evite luzes brancas e azuis</Text>
             <Text style={styles.textoSubtitulo}>• Deixe o quarto para: evite livros, TV, celulares, tablets ou leitura de e- mails</Text>
+            */}
         </View>
         </ScrollView>
       );

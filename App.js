@@ -11,6 +11,7 @@ import ChamaDiario from './src/screens/ChamaDiario';
 import HomePage from './src/screens/HomePage';
 import CuidadosPage from './src/screens/CuidadosPage';
 import ChamaTextGeral from './src/screens/ChamaTextGeral';
+import EstiloVida from './src/screens/ChamaEstiloVida';
 
 //Teste calendário
 import ChamaCalendario from './src/screens/ChamaCalendario';
@@ -126,6 +127,7 @@ const DrawerNavigatorG = createDrawerNavigator({
 const RootStackG = createStackNavigator({
   Cuidados: CuidadosPage,
   TextMostraGeral: ChamaTextGeral,
+  Estilo: EstiloVida,
   Diário: ChamaCalendario,
   Notas: ChamaDiario,
 },

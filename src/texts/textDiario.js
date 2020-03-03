@@ -20,6 +20,8 @@ class TextDiario extends Component {
     pages: [
       {
         info: 'Seu diário'
+      },{
+        info: ''
       }
     ],
   };

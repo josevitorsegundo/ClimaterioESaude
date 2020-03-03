@@ -7,7 +7,7 @@ import ChamaTextGeral from './ChamaTextGeral';
 class CuidadosPage extends React.Component {
     static navigationOptions = ({ navigation }) => {
       return {
-        title: navigation.getParam('otherParam', 'AppClimatério'),
+        title: navigation.getParam('otherParam', 'Climatério e Saúde'),
       };
     };
   
@@ -27,12 +27,7 @@ class CuidadosPage extends React.Component {
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Climatério'})}
             color="#B665A0"
           />
-          <Text/>
-          <Button
-            title="Estilo de Vida"
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Estilo de Vida'})}
-            color="#B665A0"
-          />
+          {/*
           <Text/>
           <Button
             title="Atividade Física"
@@ -40,15 +35,21 @@ class CuidadosPage extends React.Component {
             color="#B665A0"
           />
           <Text/>
+          <Button
+            title="Alimentação"
+            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Alimentação'})}
+            color="#B665A0"
+          />
+          <Text/>
            <Button
             title="Massa Corporal"
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Massa Corporal'})}
             color="#B665A0"
-          />
+          />*/}
           <Text/>
           <Button
-            title="Alimentação"
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Alimentação'})}
+            title="Estilo de Vida"
+            onPress={() => this.props.navigation.navigate('Estilo', {nome: 'Estilo de Vida'})}
             color="#B665A0"
           />
           <Text/>
