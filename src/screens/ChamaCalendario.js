@@ -41,7 +41,7 @@ class ChamaCalendario extends React.Component {
 
                 //navegar para uma tela Stack de escolha Diário ou Sentimentos -- check button
                
-               this.props.navigation.navigate('Notas');
+               this.props.navigation.navigate('Notas', {otherParam: day});
                // <TextDiario/>
                
                 // <Button title='aperta'/>

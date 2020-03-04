@@ -27,25 +27,6 @@ class CuidadosPage extends React.Component {
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Climatério'})}
             color="#B665A0"
           />
-          {/*
-          <Text/>
-          <Button
-            title="Atividade Física"
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Atividade Física'})}
-            color="#B665A0"
-          />
-          <Text/>
-          <Button
-            title="Alimentação"
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Alimentação'})}
-            color="#B665A0"
-          />
-          <Text/>
-           <Button
-            title="Massa Corporal"
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Massa Corporal'})}
-            color="#B665A0"
-          />*/}
           <Text/>
           <Button
             title="Estilo de Vida"

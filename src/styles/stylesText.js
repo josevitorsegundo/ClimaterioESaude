@@ -29,6 +29,14 @@ const styles = StyleSheet.create({
       fontSize: 15,
       textAlign: 'justify',
     },
+    textoLinkingSite:{
+      padding: 10,
+      paddingLeft: 30,
+      paddingRight: 30,
+      color: 'blue',
+      fontSize: 20,
+      textAlign: 'justify',
+    },
     buttonStyle:{
       margin: 20,
       justifyContent: 'space-between',

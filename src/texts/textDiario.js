@@ -7,24 +7,22 @@ import {AsyncStorage} from 'react-native';
 //Funcionalidade 2: ter diário para escrever de acordo com definido pelo usuário
 
 class TextDiario extends Component {
- 
-  state ={
-    //entradaTest:'Tem algo aqui',
-    entrada: '',
-    //massa: 0,
-    //resultadoNumero: 0,
-    //resultadoTexto: "",
-    limite: null,
-    page: 0,
-    //pageTest: ['Valor 1','Valor 2'],
-    pages: [
-      {
-        info: 'Seu diário'
-      },{
-        info: ''
-      }
-    ],
-  };
+  constructor(props){
+    super(props)
+    this.state = {
+      props: props.date,
+      entrada: '',
+      limite: null,
+      page: 0,
+      pages: [
+        {
+          info: 'Seu diário'
+        },{
+          info: ''
+        }
+      ],
+    }
+  }
   verifLengthText = (text) =>{
     this.setState({ entrada: text })
     if(String(text).length === 200){
@@ -33,18 +31,19 @@ class TextDiario extends Component {
       var pages = this.state.pages
       pages[this.state.page].info = text
       this.setState({
-        pages: pages        
+        pages: pages
       })
     }
   }
   
   _storeData = async () => {
+    date = 'D' + this.state.props.day + 'M' + this.state.props.month + 'Y'  + this.state.props.year
     try {
       var i = 0
       while (true){
-        const value = await AsyncStorage.getItem('pages' + i);
+        const value = await AsyncStorage.getItem(date + 'pages' + i);
         if (value !== null) {
-          AsyncStorage.removeItem('pages' + i)
+          AsyncStorage.removeItem(date + 'pages' + i)
           i += 1
         }else{
           break
@@ -57,9 +56,9 @@ class TextDiario extends Component {
       console.log(this.state.pages)
       for(i in this.state.pages){
         if(this.state.pages[i].info == ''){
-          await AsyncStorage.setItem('pages' + i,"nill");
+          await AsyncStorage.setItem(date + 'pages' + i,"nill");
         }else{
-          await AsyncStorage.setItem('pages' + i,this.state.pages[i].info);
+          await AsyncStorage.setItem(date + 'pages' + i,this.state.pages[i].info);
         }
         console.log(this.state.pages[i].info)
       }
@@ -71,9 +70,14 @@ class TextDiario extends Component {
 
 _retrieveData = async () => {
     try {
-      var list = [], i = 0
+      var list = [
+        {
+          info: ''
+        }
+      ], i = 0
+      date = 'D' + this.state.props.day + 'M' + this.state.props.month + 'Y'  + this.state.props.year
       while (true){
-        const value = await AsyncStorage.getItem('pages' + i);
+        const value = await AsyncStorage.getItem(date + 'pages' + i);
         if (value !== null) {
           if(value == 'nill'){
             list[i] = {info: ''}

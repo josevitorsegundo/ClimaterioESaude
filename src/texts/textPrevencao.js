@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ScrollView, Linking } from 'react-native';
 import styles from '../styles/stylesText';
 //linha 179 -- são sinais suspeitos -- verificar se tem como deixar em negrito só essa parte
 //expot em App e chamar tela no Button Cuidados
@@ -15,10 +15,12 @@ const TextPrevencao = () => {
     return (
         <ScrollView>
         <View style={styles.container}>
-            <Text style={styles.textoSubtitulo}>No período pós-menopausa as mulheres ficam mais vulneráveis a 
-            desenvolverem algumas doenças. Isto ocorre devido à diminuição dos hormônios femininos, 
-            principalmente o estrogênio e também aos fatores naturais do envelhecimento (BRASIL, 2017). </Text>
-            <Text style={styles.textoTitulo}>1- Doenças Cardiovasculares</Text>
+            <Text style={styles.textoSubtitulo}>Como parte do processo natural do 
+            envelhecimento feminino, o período pós- menopausa torna as mulheres mais 
+            vulneráveis a desenvolver algumas doenças. A diminuição dos hormônios femininos é 
+            um dos fatores que contribui para o surgimento de males nessa fase da vida 
+            (BRASIL, 2017).</Text>
+
             <Text style={styles.textoSubtitulo}>As doenças cardiovasculares ocupam o primeiro lugar como 
             causa de morte feminina. </Text>
             <Text style={styles.textoSubtitulo}>Estas medidas abaixo ajudam a prevenir infarto (ataque cardíaco), 
@@ -87,11 +89,18 @@ const TextPrevencao = () => {
             <Text style={styles.textoSubtitulo}>• Conheça e pratique exercícios que auxiliam no fortalecimento 
             muscular, alongamento e melhoram o equilíbrio na Cartilha da Sociedade Brasileira de Reumatologia 
             que está disponível no link: </ Text>
-  
+                
+            {/*   
             <Text  
             textContentType= 'URL'
-            onPress={null} 
+            onPress={(null)} 
             style={styles.textoSubtitulo}>https://www.reumatologia.org.br/download/osteoporose/
+            </ Text>*/} 
+
+            <Text  
+            textContentType= 'URL'
+            onPress={()=> Linking.openURL('https://www.reumatologia.org.br/download/osteoporose/')} 
+            style={styles.textoLinkingSite}>https://www.reumatologia.org.br/download/osteoporose/
             </ Text>
             
             <Text style={styles.textoTitulo}>Como é feito o diagnóstico da osteoporose?</ Text>
