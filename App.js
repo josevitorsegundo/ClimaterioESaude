@@ -6,18 +6,14 @@ import { createDrawerNavigator, DrawerActions } from 'react-navigation-drawer';
 import Icon from 'react-native-vector-icons/FontAwesome';
 YellowBox.ignoreWarnings(['Accessing view manager'])
 
+//alterar textos
 //Import das screens
 import ChamaDiario from './src/screens/ChamaDiario';
 import HomePage from './src/screens/HomePage';
 import CuidadosPage from './src/screens/CuidadosPage';
 import ChamaTextGeral from './src/screens/ChamaTextGeral';
 import EstiloVida from './src/screens/ChamaEstiloVida';
-
-//Teste calendário
 import ChamaCalendario from './src/screens/ChamaCalendario';
-
-//alterar textos
-//não esquecer de remover botão mostrar de cuidados
 
 const RootStackG = createStackNavigator({
   Cuidados: CuidadosPage,
@@ -27,7 +23,6 @@ const RootStackG = createStackNavigator({
   Notas: ChamaDiario,
 },
 {
-  // The header config
   defaultNavigationOptions: {
     headerStyle: {
       backgroundColor: '#B665A0',
@@ -41,7 +36,5 @@ const RootStackG = createStackNavigator({
 }
 );
 
-//const App = createAppContainer(DrawerNavigatorG);
-//const App = createAppContainer(DrawerNavigatorF1);
 const App = createAppContainer(RootStackG);
 export default App;

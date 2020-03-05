@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView, TextInput, TouchableOpacity, Dimensions, Button, Image } from 'react-native';
 import styles from '../styles/stylesText';
-//import { TextInput } from 'react-native-gesture-handler';
-
-//const TextMassa = () => {
 class TextMassa extends Component {
   
   state ={
@@ -14,8 +11,7 @@ class TextMassa extends Component {
   };
 
   handleCalculate = () => {
-  if (this.state.altura != 0 && this.state.massa != 0) {
-  //if (this.state.massa != 0){  
+  if (this.state.altura != 0 && this.state.massa != 0) { 
   let imc = (this.state.massa)/ (this.state.altura * this.state.altura); // verificar condição
   this.setState({
     resultadoNumero: imc.toFixed(2)
@@ -33,7 +29,6 @@ class TextMassa extends Component {
      this.setState( { resultadoTexto: 
         "Abaixo"})
     }
- // }
     } else{
       this.setState( { resultadoTexto: 
         "ERROR"})
@@ -44,20 +39,20 @@ class TextMassa extends Component {
     return (
       <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.textoTitulo}>• Mantenha o peso normal para prevenir sobrepeso e obesidade  </Text>
+        <Text style={styles.textoTitulo}>• Mantenha o peso normal para prevenir sobrepeso e 
+        obesidade</Text>
         
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image style={{width: 200, height: 200}} source={require('../images/imagem6.jpg')}/>
           </View>
         
-        <Text style={styles.textoSubtitulo}>Durante o envelhecimento feminino, ocorre redução
-         do metabolismo. No climatério, o ganho de peso chega a 800 gramas por ano, podendo 
-         haver um aumento de até 20% na gordura corporal. Manter-se ativa ou em movimento 
-         colabora para acelerar o metabolismo e diminuir o ganho de peso (BRASIL, 2010).</Text>
-         <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado, 
-         calcule seu índice de massa corporal (IMC). </Text>
+        <Text style={styles.textoSubtitulo}>Durante o envelhecimento feminino, ocorre redução do 
+        metabolismo. No climatério, o ganho de peso chega a 800 gramas por ano, podendo haver um aumento 
+        de até 20% na gordura corporal. Manter-se ativa ou em movimento colabora para acelerar o 
+        metabolismo e diminuir o ganho de peso.</Text>
 
-        <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado insira:</Text>
+        <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado, calcule seu índice de 
+        massa corporal (IMC). </Text>
         
         <Text style={styles.textoSubtitulo}>Clique abaixo e insira sua altura e massa respectivamente: </Text>
         <View style={{padding:10}}>
@@ -75,15 +70,6 @@ class TextMassa extends Component {
                 this.setState({ massa });
               }}
             />
-          {/*
-          <TouchableOpacity
-            //style={styles.button}
-            onPress={this.handleCalculate}
-          >
-          <Text style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#B665A0',
-              textShadowColor:'#B665A0' }}>Calcular </Text>
-          </TouchableOpacity>*/}
-        
         </View>
 
         <Button
@@ -100,23 +86,21 @@ class TextMassa extends Component {
           </View>
 
           <Text style={styles.textoSubtitulo}>* ISERIR TABELA IMC DO ARQUIVO COMO IMAGEM. </Text>
-           <Text style={styles.textoSubtitulo}>A medida da circunferência abdominal (medida 
-           da cintura) permite conhecer o risco de desenvolver doenças do coração e diabetes. </ Text>
-           <Text style={styles.textoSubtitulo}>* Colocar figuras demonstrando como medir a circunferência 
-           abdominal </ Text>
-           <Text style={styles.textoSubtitulo}>INSERIR TABELA CIRCUNFERÊNCIA COMO IMAGEM</Text>
+
+           <Text style={styles.textoSubtitulo}>A medida da circunferência abdominal (medida da cintura) 
+           permite conhecer o risco de desenvolver doenças do coração e diabetes.</ Text>
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image style={{width: 200, height: 200}} source={require('../images/imagem7.jpg')}/>
             </View>
 
-           <Text style={styles.textoSubtitulo}>• As mulheres acima do peso, ou seja, com 
-           índice de massa corporal (IMC) de 25 a 29,9 kg/m², devem realizar um mínimo de 60 a 
-           90 minutos de atividade física moderada, preferencialmente todos os dias da semana 
-           (LEE, et al., 2017). </ Text>
-           <Text style={styles.textoSubtitulo}>•	Mulheres obesas devem realizar 300 minutos de 
-           atividade física por semana para reduzir a gordura corporal total 
-           (FRIEDENREICH, et al., 2015).</ Text>
+            <Text style={styles.textoSubtitulo}>INSERIR TABELA CIRCUNFERÊNCIA COMO IMAGEM</Text>
+
+           <Text style={styles.textoSubtitulo}>•	As mulheres acima do peso, ou seja, com índice de massa 
+           corporal (IMC) de 25 a 29,9 kg/m², devem realizar um mínimo de 60 a 90 minutos de atividade 
+           física moderada, preferencialmente todos os dias da semana.</ Text>
+           <Text style={styles.textoSubtitulo}>•	Mulheres obesas devem realizar 300 minutos de atividade 
+           física por semana para reduzir a gordura corporal total.</ Text>
       </View>
       </ScrollView>
       );
