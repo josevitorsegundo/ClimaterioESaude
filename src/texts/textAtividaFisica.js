@@ -13,8 +13,6 @@ const TextAtividadeFisica = () => {
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} source={require('../images/imagem3.jpg')}/>
-            <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/imagem4.jpg')}/>
           </View>
           
           <Text style={styles.textoSubtitulo}>A prática de atividade física é eficiente para manter a 

@@ -37,17 +37,9 @@ class ChamaCalendario extends React.Component {
             }}
             monthFormat={'MMM yyyy'}
             onDayPress={day => {
-                //alert('Clicastes \n'+day.day)
 
-                //navegar para uma tela Stack de escolha Diário ou Sentimentos -- check button
-               
                this.props.navigation.navigate('Notas', {otherParam: day});
-               // <TextDiario/>
                
-                // <Button title='aperta'/>
-               
-                // <ChamaDiario/>
-                //console.log('selected day', day);
             }}
             />
             </View>

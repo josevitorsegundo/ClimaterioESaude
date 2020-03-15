@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, TextInput, Dimensions, Button, Icon } from 'react-native';
+import { Text, View, ScrollView, TextInput, Dimensions, Button, Icon, Alert, FlatList } from 'react-native';
 import styles from '../styles/stylesText';
 import {AsyncStorage} from 'react-native';
 
@@ -17,8 +17,6 @@ class TextDiario extends Component {
       pages: [
         {
           info: 'Seu diário'
-        },{
-          info: ''
         }
       ],
     }
@@ -60,7 +58,6 @@ class TextDiario extends Component {
         }else{
           await AsyncStorage.setItem(date + 'pages' + i,this.state.pages[i].info);
         }
-        console.log(this.state.pages[i].info)
       }
       console.log('salvo')
     } catch (error){
@@ -70,11 +67,7 @@ class TextDiario extends Component {
 
 _retrieveData = async () => {
     try {
-      var list = [
-        {
-          info: ''
-        }
-      ], i = 0
+      var list = this.state.pages, i = 0
       date = 'D' + this.state.props.day + 'M' + this.state.props.month + 'Y'  + this.state.props.year
       while (true){
         const value = await AsyncStorage.getItem(date + 'pages' + i);
@@ -85,7 +78,6 @@ _retrieveData = async () => {
             list[i] = {info: value}
           }
           i += 1
-          console.log(value);
         }else{
           break
         }
@@ -121,6 +113,10 @@ _retrieveData = async () => {
     this.setState({
       pages: pages
     })
+    Alert.alert('Página adicionada', null, [
+      {text: 'OK', onPress: () => console.log('Ok pressed')}
+    ],
+    {cancelable: false})
   }
   remPage = () =>{
     var pages = this.state.pages
@@ -133,67 +129,93 @@ _retrieveData = async () => {
       this.setState({
         pages: pages
       })
+      if(pages.length == this.state.page + 1){
+        this.setState({
+          page: this.state.page-1
+        })
+      }
       pages.pop()
-      console.log(pages)
+      Alert.alert('Página removida', null, [
+        {text: 'OK', onPress: () => console.log('Ok pressed')}
+      ],
+      {cancelable: false})
     }
   }
   componentDidMount = async() =>{
     this._retrieveData()
   }
   render(){
+    var pagesQuant = this.state.pages;
     var {heigt, width} = Dimensions.get("window");
     return (
       <ScrollView>
       <View style={styles.container + {width:width}}>
           <Text style={styles.textoTitulo}>Escreva aqui o seu diário: </Text>
-          
           <TextInput
           multiline={true}
           maxLength={200}
           placeholder="Digite aqui"
           defaultValue={this.state.pages[this.state.page].info}
           keyboardType="default"
-          style={{textAlignVertical: "top", fontSize: 20, borderWidth: 1, borderColor: '#B665A0', minHeight: 200 }}
+          style={{textAlignVertical: "top", fontSize: 20, borderWidth: 1, borderColor: '#9268D0', minHeight: 200 }}
           onChangeText={entrada=> this.verifLengthText(entrada)}
           />
+          
+          {/*
+          <FlatList
+          data={this.state.data}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => {
+            return (
+              <View style={styles.item}>
+                <Text style={styles.text}>{item.name}</Text>
+              </View>
+            );
+          }}
+          />*/}
+          
+          
 
-          <View style={{flexDirection:"row"}}>
+          <View style={{flexDirection:"row", alignItems: "center"}}>
             <Button
             title="<-"
-            
+            disabled={this.state.page == 0}
             onPress={() => this.backOrNext(false)}
-            color="#B665A0"
+            color="#9268D0"
             />
+            
             <Button
             title="Adicionar pagina"
-
             onPress={() => this.addPage()}
-            color="#B665A0"
+            color="#9268D0"
             />
-            <Text style={{paddingHorizontal: 5, fontSize:25, backgroundColor: "#B665A0", color: "#FFFFFF"}}>{this.state.page + 1}</Text>
+            
+            
+              <View style={{flexDirection:"row", alignItems: "center"}}>
+               <Text style={{paddingHorizontal: 5, fontSize:25, backgroundColor: "#9268D0", 
+                color: "#FFFFFF"}}>{this.state.page + 1}-{pagesQuant.length}</Text>
+             
+              </View>
+            
+
             <Button
             title="Remover pagina"
-       
             onPress={() => this.remPage()}
-            color="#B665A0"
+            color="#9268D0"
             />
+            
             <Button
             title="->"
-          
+            disabled={this.state.page + 1 == this.state.pages.length}
             onPress={() => this.backOrNext(true)}
-            color="#B665A0"
+            color="#9268D0"
             />
           </View>
+          
           <Button
           title="Salvar"
           onPress={()=>this._storeData()}
-          color="#B665A0"
-          />
-          
-          <Button
-          title="Mostrar"
-          onPress={()=>this._retrieveData()}
-          color="#B665A0"
+          color="#9268D0"
           />
       </View>
       </ScrollView>

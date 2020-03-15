@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 //Import dos Textos
-import TextHome from './textHome';
+import TextClimaterioMenopausa from './textClimaterioMenopausa';
 import TextAlimentos from './textAlimento';
 import TextEstilo from './textEstiloVida';
 import TextAtividadeFisica from './textAtividaFisica';
@@ -17,15 +17,15 @@ const TextGeral = ({ind}) => {
     const tela = (
       ind === 'Sexo' ? <TextSexo/> : 
       ind === 'Saúde Bucal' ? <TextSaudeBucal/> : 
-      ind === 'Terapias' ? <TextTerapias/> :  
+      ind === 'Terapia Hormonal e práticas complementares' ? <TextTerapias/> :  
       ind === 'Prevenção de Doenças' ? <TextPrevencao/> : 
       ind === 'Sintomas' ? <TextSintomas/>  : 
-      ind === 'Massa Corporal' ? <TextMassa/>  : 
+      ind === 'Índice de Massa Corporal' ? <TextMassa/>  : 
       ind === 'Alimentação'  ? <TextAlimentos/> : 
       ind === 'Atividade Física' ? <TextAtividadeFisica/> :
-      ind === 'Estilo de Vida' ? <TextEstilo/> :
-      ind === 'Climatério' ? <TextHome/> :
-      ind === 'Sono' ? <TextSono/> :
+      ind === 'Estilo de Vida Saudável' ? <TextEstilo/> :
+      ind === 'Climatério e Menopausa' ? <TextClimaterioMenopausa/> :
+      ind === 'Cuidados com o Sono' ? <TextSono/> :
       //ind === 'Diário' ? this.props.navigation.navigate('Diário') :
         null
     )

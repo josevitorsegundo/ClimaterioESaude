@@ -22,53 +22,53 @@ class CuidadosPage extends React.Component {
           <View style={styles.buttonStyle} >
           <Text/>
           <Button
-            title="Climatério"
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Climatério'})}
-            color="#B665A0"
+            title="Climatério e Menopausa"
+            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Climatério e Menopausa'})}
+            color="#9268D0"
           />
           <Text/>
           <Button
-            title="Estilo de Vida"
-            onPress={() => this.props.navigation.navigate('Estilo', {nome: 'Estilo de Vida'})}
-            color="#B665A0"
+            title="Estilo de Vida Saudável"
+            onPress={() => this.props.navigation.navigate('Estilo', {nome: 'Estilo de Vida Saudável'})}
+            color="#9268D0"
           />
           <Text/>
           <Button
             title="Sintomas"
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Sintomas'})}
-            color="#B665A0"
+            color="#9268D0"
           />
           <Text/>
           <Button
             title="Prevenção de Doenças"
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Prevenção de Doenças'})}
-            color="#B665A0"
+            color="#9268D0"
           />
           <Text/>
           <Button
             title="Saúde Bucal"
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Saúde Bucal'})}
-            color="#B665A0"
+            color="#9268D0"
           />
           <Text/>
           <Button
             title="Sexo"
             //onPress={() => this.props.navigation.navigate('TextMostraSexo')}
             onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Sexo'})}
-            color="#B665A0"
+            color="#9268D0"
           />
           <Text/>
           <Button
-            title="Terapias"
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Terapias'})}
-            color="#B665A0"
+            title="Terapia Hormonal e práticas complementares"
+            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Terapia Hormonal e práticas complementares'})}
+            color="#9268D0"
           />
           <Text/>
           <Button
             title="Diário"
             onPress={() => this.props.navigation.navigate('Diário')}
             //onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Terapias'})}
-            color="#B665A0"
+            color="#9268D0"
           />
           </View>
         </View>

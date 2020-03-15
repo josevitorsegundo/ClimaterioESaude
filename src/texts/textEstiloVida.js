@@ -14,7 +14,6 @@ const TextEstilo = () => {
             <Image style={{width: 200, height: 200}} source={require('../images/imagem2.jpg')}/>
             </View>
             
-          <Text style={styles.textoTitulo}>Estilo de vida saudável </Text>
           <Text style={styles.textoSubtitulo}>Durante o climatério, é fundamental adotar um estilo de 
           vida saudável. Estas atitudes ajudam a diminuir os sintomas que podem alterar a sua qualidade 
           de vida nesse período:</Text>

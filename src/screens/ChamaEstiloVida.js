@@ -8,7 +8,7 @@ import ChamaTextGeral from './ChamaTextGeral';
 class EstiloVida extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
-          title: navigation.getParam('otherParam', 'Estilo de Vida'),
+          title: navigation.getParam('otherParam', 'Estilo de Vida Saudável'),
         };
       };
     render() {
@@ -25,25 +25,25 @@ class EstiloVida extends React.Component {
                 <Button
                 title="Atividade Física"
                 onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Atividade Física'})}
-                color="#B665A0"
+                color="#9268D0"
                 />
                 <Text/>
                 <Button
                 title="Alimentação"
                 onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Alimentação'})}
-                color="#B665A0"
+                color="#9268D0"
                 />
                 <Text/>
                 <Button
-                title="Massa Corporal"
-                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Massa Corporal'})}
-                color="#B665A0"
+                title="Índice de Massa Corporal"
+                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Índice de Massa Corporal'})}
+                color="#9268D0"
                 />
                 <Text/>
                 <Button
-                title="Sono"
-                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Sono'})}
-                color="#B665A0"
+                title="Cuidados com o Sono"
+                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Cuidados com o Sono'})}
+                color="#9268D0"
                 />
 
                 </View>

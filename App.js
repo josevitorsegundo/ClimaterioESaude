@@ -9,7 +9,6 @@ YellowBox.ignoreWarnings(['Accessing view manager'])
 //alterar textos
 //Import das screens
 import ChamaDiario from './src/screens/ChamaDiario';
-import HomePage from './src/screens/HomePage';
 import CuidadosPage from './src/screens/CuidadosPage';
 import ChamaTextGeral from './src/screens/ChamaTextGeral';
 import EstiloVida from './src/screens/ChamaEstiloVida';
@@ -25,7 +24,7 @@ const RootStackG = createStackNavigator({
 {
   defaultNavigationOptions: {
     headerStyle: {
-      backgroundColor: '#B665A0',
+      backgroundColor: '#9268D0',//'#B665A0',//
 
     },
     headerTintColor: '#fff',

@@ -103,15 +103,19 @@ const TextSintomas = () => {
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
             source={require('../images/sintomas3.jpg')}/>
-            <Text> </Text>
-            <Image style={{width: 200, height: 200}} 
-            source={require('../images/sintomas4.jpg')}/>
             </View>
             
             <Text style={styles.textoSubtitulo}>Na pós-menopausa, a queda dos níveis do hormônio 
             estrogênio causa a diminuição da força dos músculos que sustentam a bexiga e o útero. 
             As alterações nos tecidos da vagina e sistema urinário aumentam o risco de desenvolver 
             infecções urinárias e de perda de urina sem controle (incontinência).</ Text>
+
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} 
+            source={require('../images/sintomas4.jpg')}/>
+            </View>
+
             <Text style={styles.textoSubtitulo}>Devido à perda da elasticidade dos tecidos da vagina, 
             pode ocorrer sangramento, dor, diminuição da lubrificação e dificuldade para chegar ao 
             orgasmo durante as relações sexuais.</ Text>

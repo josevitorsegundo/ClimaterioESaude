@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ScrollView, Image } from 'react-native';
 import styles from '../styles/stylesText';
 //expot em App e chamar tela no Button Cuidados
 
@@ -8,18 +8,27 @@ const TextSexo = () => {
     return (
         <ScrollView>
         <View style={styles.container}>
-            <Text style={styles.textoSubtitulo}>Durante o climatério algumas mulheres relatam piora e/ ou 
-            diminuição /interrupção de suas práticas sexuais. São comuns sintomas como ressecamento vaginal, 
-            coceira, irritação, ardência, sensação de pressão e dor durante a relação sexual. Também pode 
-            ocorrer perda do desejo sexual e rejeição do parceiro (BRASIL, 2016). </Text>
+
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} 
+            source={require('../images/sexo1.jpg')}/>
+            </View>
+
+            <Text style={styles.textoSubtitulo}>A sexualidade e sensualidade não dependem da idade e 
+            continuam fazendo parte da vida após a menopausa. Entretanto, nesse período, algumas 
+            mulheres podem enfrentar transtornos, que são causados pela diminuição dos hormônios 
+            femininos.</Text>
             <Text style={styles.textoSubtitulo}>Recomenda-se:</Text>
-            <Text style={styles.textoSubtitulo}>• Usar preservativos masculinos ou femininos </Text>
-            <Text style={styles.textoSubtitulo}>• Usar lubrificantes vaginais a base de água nas relações 
-            sexuais para diminuir os efeitos do ressecamento vaginal</Text>
-            <Text style={styles.textoSubtitulo}>• Busque auxílio médico em caso de dor, ressecamento não 
-            aliviado pelo uso de lubrificantes ou sangramento durante as relações sexuais, para que ele lhe 
-            forneça outras opções de tratamentos existentes para alívio destes sintomas e também investigue a 
-            existência de doenças que também apresentam sangramento vaginal </ Text>
+            <Text style={styles.textoSubtitulo}>• Usar lubrificantes vaginais à base de água, nas 
+            relações sexuais, para diminuir os efeitos do ressecamento vaginal. Os lubrificantes 
+            facilitam a penetração e a tornam mais prazerosa;</Text>
+            <Text style={styles.textoSubtitulo}>• Buscar auxílio médico em caso de dor, ressecamento 
+            não aliviado pelo uso de lubrificantes ou sangramento durante as relações sexuais, para que 
+            sejam fornecidas outras opções de tratamentos para alívio desses sintomas;</Text>
+            <Text style={styles.textoSubtitulo}>• Há certas condições que podem interferir na vida 
+            sexual, tais como: diabetes, colesterol alto, fumo, álcool, menopausa e alguns medicamentos. 
+            Converse com um profissional de saúde.</ Text>
         </View>
         </ScrollView>
       );
