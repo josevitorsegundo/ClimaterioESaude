@@ -1,8 +1,30 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView, TextInput, TouchableOpacity, Dimensions, Button, Image } from 'react-native';
 import styles from '../styles/stylesText';
+import { Table, Row, Rows } from 'react-native-table-component';
+
 class TextMassa extends Component {
   
+  constructor(props) {
+    super(props);
+    this.tabela1 = {
+      tableHead: ['Índice de Massa Corporal (IMC)'],
+      tableData: [
+        ['Peso adequado', 'De 18,5 a 24,9 kg/m²'],
+        ['Sobrepeso', 'De 25 a 29,9 kg/m²'],
+        ['Obesidade', 'Igual ou maior que 30 kg/m²']
+      ]
+    }
+    this.tabela2 = {
+      tableHead: ['Medida da circunferência abdominal em mulheres adultas'],
+      tableData: [
+        ['Ideal', 'Menor que 80 cm'],
+        ['Risco elevado', 'Maior que 80 cm'],
+        ['Risco muito elevado', 'Maior que 88 cm']
+      ]
+    }
+  }
+
   state ={
   altura: 0,
   massa: 0,
@@ -36,7 +58,10 @@ class TextMassa extends Component {
    }
     render(){
       var {height, widht} = Dimensions.get('window')
-    return (
+      const tabela1 = this.tabela1;
+      const tabela2 = this.tabela2;
+    
+      return (
       <ScrollView>
       <View style={styles.container}>
         <Text style={styles.textoTitulo}>• Mantenha o peso normal para prevenir sobrepeso e 
@@ -50,7 +75,7 @@ class TextMassa extends Component {
         metabolismo. No climatério, o ganho de peso chega a 800 gramas por ano, podendo haver um aumento 
         de até 20% na gordura corporal. Manter-se ativa ou em movimento colabora para acelerar o 
         metabolismo e diminuir o ganho de peso.</Text>
-
+        
         <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado, calcule seu índice de 
         massa corporal (IMC). </Text>
         
@@ -59,13 +84,13 @@ class TextMassa extends Component {
         <TextInput
           placeholder="Altura (exemplo: 1.53)"
           keyboardType="numeric"
-          style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#B665A0'}}
+          style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#9268D0'}}
           onChangeText={altura => {this.setState({ altura });}}
           />
           <TextInput
               placeholder="Massa (exemplo: 50.5)"
               keyboardType="numeric"
-              style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#B665A0'}}
+              style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#9268D0'}}
               onChangeText={massa => {
                 this.setState({ massa });
               }}
@@ -75,7 +100,7 @@ class TextMassa extends Component {
         <Button
           title="Calcular"
           onPress={this.handleCalculate}
-          color="#B665A0"
+          color="#9268D0"
         />
 
           <View>
@@ -85,7 +110,13 @@ class TextMassa extends Component {
           </Text>
           </View>
 
-          <Text style={styles.textoSubtitulo}>* ISERIR TABELA IMC DO ARQUIVO COMO IMAGEM. </Text>
+
+          <View style={styles.tabelaStyleContainer}>
+          <Table borderStyle={{borderWidth: 2, borderColor: 'black'}}>
+          <Row data={tabela1.tableHead} style={styles.tabelaStyleHead} textStyle={styles.tabelaStyleText}/>
+          <Rows data={tabela1.tableData} textStyle={styles.tabelaStyleText}/>
+          </Table>
+          </View>
 
            <Text style={styles.textoSubtitulo}>A medida da circunferência abdominal (medida da cintura) 
            permite conhecer o risco de desenvolver doenças do coração e diabetes.</ Text>
@@ -94,7 +125,14 @@ class TextMassa extends Component {
             <Image style={{width: 200, height: 200}} source={require('../images/imagem7.jpg')}/>
             </View>
 
-            <Text style={styles.textoSubtitulo}>INSERIR TABELA CIRCUNFERÊNCIA COMO IMAGEM</Text>
+            
+
+            <View style={styles.tabelaStyleContainer}>
+            <Table borderStyle={{borderWidth: 2, borderColor: 'black'}}>
+            <Row data={tabela2.tableHead} style={styles.tabelaStyleHead} textStyle={styles.tabelaStyleText}/>
+            <Rows data={tabela2.tableData} textStyle={styles.tabelaStyleText}/>
+            </Table>
+            </View>
 
            <Text style={styles.textoSubtitulo}>•	As mulheres acima do peso, ou seja, com índice de massa 
            corporal (IMC) de 25 a 29,9 kg/m², devem realizar um mínimo de 60 a 90 minutos de atividade 

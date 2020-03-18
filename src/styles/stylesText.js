@@ -44,6 +44,10 @@ const styles = StyleSheet.create({
     resultadoStyle:{
       justifyContent: 'center',
     },
+    tabelaStyleContainer: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+    tabelaStyleHead: { height: 40, backgroundColor: '#9268D0'},
+    tabelaStyleText: { margin: 6, textAlign: "center" }, 
+    
   });
 
   export default styles ;
