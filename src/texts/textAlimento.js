@@ -10,7 +10,7 @@ const TextAlimentos = () => {
           <Text style={styles.textoTitulo}>• Prefira alimentação saudável </Text>
 
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 200, height: 200}} source={require('../images/imagem5.jpg')}/>
+            <Image style={{width: 200, height: 200}} source={require('../images/alimentos1.jpg')}/>
           </View>
 
           <Text style={styles.textoSubtitulo}>Adotar alimentação saudável durante toda a vida e 
@@ -47,8 +47,14 @@ const TextAlimentos = () => {
             evitados;</Text>
             <Text style={styles.textoSubtitulo}>Passo 10 - Seja crítico quanto às informações e 
             mensagens sobre alimentação veiculadas em propagandas comerciais (TV, internet, etc.).</Text>
-            <Text style={styles.textoSubtitulo}>INSERIR IMAGEM DE REPRESENTAÇÃO GRÁFICA DE ALIMENTOS IN 
-            NATURA</Text>
+            
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Image style={{width: 200, height: 200}} source={require('../images/alimentos2.png')}/>
+            </View>
+
+            <Text style={styles.textoSubtitulo}>ILUSTRAÇÃO: alimento in natura, alimento processado e 
+            alimento ultraprocessado</Text>
+
         </View>
         </ScrollView>
       );
