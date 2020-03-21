@@ -319,6 +319,12 @@ const TextPrevencao = () => {
             <Text style={styles.textoSubtitulo}>As infecções sexualmente transmissíveis (IST) são doenças 
             transmitidas de uma pessoa a outra por contato sexual ou sangue. Feridas nos órgãos genitais, 
             corrimento na uretra ou vagina e dor pélvica são sintomas das IST.</ Text>
+
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/doencas14.jpg')}/>
+            </View>
+
             <Text style={styles.textoSubtitulo}>Para prevenir IST tenha os seguintes cuidados:</ Text>
             
             <Text style={styles.textoSubtitulo}>• Use preservativo (masculino ou feminino);</ Text>
