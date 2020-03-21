@@ -234,11 +234,25 @@ const TextPrevencao = () => {
             que justifica a coleta do exame;</ Text>
            
             <Text style={styles.textoTitulo}>Câncer de mama </ Text>
+            
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/doencas9.jpg')}/>
+            </View>
+
+            <Text style={styles.textoSubtitulo}>Fonte: SBM</ Text>
 
             <Text style={styles.textoSubtitulo}>O câncer de mama se caracteriza pelo crescimento 
             desordenado de células anormais na mama. Essas alterações acontecem devido às mudanças 
             genéticas, herança familiar, exposição a fatores ambientais ou, ainda, características 
             individuais do organismo de cada pessoa.</ Text>
+
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/doencas10.jpg')}/>
+            </View>
+
+            <Text style={styles.textoSubtitulo}>Fonte: SBM</ Text>
 
             <Text style={styles.textoTitulo}>Fatores gerais de risco para câncer de mama</ Text>
             
@@ -262,6 +276,11 @@ const TextPrevencao = () => {
             
             <Text style={styles.textoTitulo}>São recomendações para a prevenção do câncer de mama:</ Text>
             
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/doencas11.jpg')}/>
+            </View>
+
             <Text style={styles.textoSubtitulo}>• Realize mamografia anualmente a partir de 40 anos</ Text>
             <Text style={styles.textoSubtitulo}>• Exponha-se a radiação apenas quando houver recomendação 
             médica para realizar exames radiológicos;</ Text>
@@ -284,8 +303,18 @@ const TextPrevencao = () => {
             mamas, diferença de tamanho das mamas, edema (inchaço), pele da mama enrugada ou com 
             aparência de casca de laranja, mudança no formato dos mamilos.</ Text>
             
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/doencas12.jpg')}/>
+            </View>
+
             <Text style={styles.textoTitulo}>4 - Prevenção de infecções sexualmente transmissíveis 
             (IST)</ Text>
+
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text> </Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/doencas13.jpg')}/>
+            </View>
             
             <Text style={styles.textoSubtitulo}>As infecções sexualmente transmissíveis (IST) são doenças 
             transmitidas de uma pessoa a outra por contato sexual ou sangue. Feridas nos órgãos genitais, 
