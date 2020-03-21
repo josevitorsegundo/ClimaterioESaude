@@ -11,7 +11,7 @@ const TextEstilo = () => {
         
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/imagem2.jpg')}/>
+            <Image style={{width: 200, height: 200}} source={require('../images/estiloVida1.jpg')}/>
             </View>
             
           <Text style={styles.textoSubtitulo}>Durante o climatério, é fundamental adotar um estilo de 

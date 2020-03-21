@@ -13,7 +13,7 @@ const TextClimaterioMenopausa = () => {
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/imagem1.jpg')}/>
+            source={require('../images/climaterio1.jpg')}/>
         </View>
 
         <Text style={styles.textoTitulo}>O que é climatério? </Text>

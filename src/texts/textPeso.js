@@ -68,7 +68,7 @@ class TextMassa extends Component {
         obesidade</Text>
         
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 200, height: 200}} source={require('../images/imagem6.jpg')}/>
+            <Image style={{width: 200, height: 200}} source={require('../images/peso1.jpg')}/>
           </View>
         
         <Text style={styles.textoSubtitulo}>Durante o envelhecimento feminino, ocorre redução do 
@@ -122,7 +122,7 @@ class TextMassa extends Component {
            permite conhecer o risco de desenvolver doenças do coração e diabetes.</ Text>
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 200, height: 200}} source={require('../images/imagem7.jpg')}/>
+            <Image style={{width: 200, height: 200}} source={require('../images/peso2.jpg')}/>
             </View>
 
             
