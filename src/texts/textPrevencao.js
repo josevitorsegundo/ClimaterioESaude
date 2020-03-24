@@ -36,7 +36,7 @@ const TextPrevencao = () => {
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/doencas2.jpg')}/>
+            <Image style={{width: 250, height: 200}} source={require('../images/doencas2.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>• Adote um estilo de vida saudável: pratique exercícios 
@@ -71,7 +71,7 @@ const TextPrevencao = () => {
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/doencas3.jpg')}/>
+            <Image style={{width: 250, height: 200}} source={require('../images/doencas3.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>A osteoporose é uma doença que não apresenta sintomas e 
@@ -168,7 +168,7 @@ const TextPrevencao = () => {
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/doencas6.jpg')}/>
+            <Image style={{width: 250, height: 200}} source={require('../images/doencas6.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Grande parte das infecções no colo do útero é passageira 
@@ -237,7 +237,7 @@ const TextPrevencao = () => {
             
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/doencas9.jpg')}/>
+            <Image style={{width: 250, height: 200}} source={require('../images/doencas9.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Fonte: SBM</ Text>
@@ -249,7 +249,7 @@ const TextPrevencao = () => {
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/doencas10.jpg')}/>
+            <Image style={{width: 250, height: 200}} source={require('../images/doencas10.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Fonte: SBM</ Text>
@@ -304,8 +304,7 @@ const TextPrevencao = () => {
             aparência de casca de laranja, mudança no formato dos mamilos.</ Text>
             
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/doencas12.jpg')}/>
+            <Image style={{width: 200, height: 250}} source={require('../images/doencas12.jpg')}/>
             </View>
 
             <Text style={styles.textoTitulo}>4 - Prevenção de infecções sexualmente transmissíveis 
@@ -322,7 +321,7 @@ const TextPrevencao = () => {
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
-            <Image style={{width: 200, height: 200}} source={require('../images/doencas14.jpg')}/>
+            <Image style={{width: 250, height: 200}} source={require('../images/doencas14.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Para prevenir IST tenha os seguintes cuidados:</ Text>

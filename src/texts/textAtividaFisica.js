@@ -25,7 +25,7 @@ const TextAtividadeFisica = () => {
           
           <Text style={styles.textoSubtitulo}>•	Pratique exercícios de acordo sua capacidade física e, aos 
           poucos, aumente sua intensidade; </Text>
-          <Text style={styles.textoSubtitulo}>•	Recomenda-se, em média, 150 minutos de atividade 
+          <Text style={styles.textoSubtitulo}>• Recomenda-se, em média, 150 minutos de atividade 
           aeróbica moderada por semana (caminhada, corrida, dança, hidroginástica, andar de bicicleta, 
           subir escadas, pular corda, dentre outras). Pode ser incluído o tempo gasto em atividades de 
           trabalho ou lazer desde que ao menos 10 minutos sejam de atividade contínua ou seja, sem 
@@ -35,7 +35,7 @@ const TextAtividadeFisica = () => {
           <Text style={styles.textoSubtitulo}>•	Realize, diariamente ou sempre que possível, atividade 
           de lazer, relaxamento, coordenação motora, manutenção do equilíbrio e outras que envolvam 
           contato com pessoas: dança, caminhada, corrida, musculação, tai chi chuan e ioga;</Text>
-          <Text style={styles.textoSubtitulo}>•	 Existem aparelhos que são usados para contar passos 
+          <Text style={styles.textoSubtitulo}>•	Existem aparelhos que são usados para contar passos 
           (pedômetros), eles indicam seu nível de atividade, ou seja se você está movimentando-se o 
           suficiente (a meta diária recomendada é de seis a sete mil passos);</Text>
         </View>

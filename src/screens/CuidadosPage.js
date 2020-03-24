@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { View, Button, Text, ScrollView } from 'react-native';
+import { View, Button, Text, ScrollView, Image } from 'react-native';
 import styles from '../styles/stylesText';
-
-import ChamaTextGeral from './ChamaTextGeral';
 
 class CuidadosPage extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -12,9 +10,6 @@ class CuidadosPage extends React.Component {
     };
   
     render() {
-      const { navigation } = this.props;
-      //const itemId = navigation.getParam('itemId', 'NO-ID'); 
-      //const otherParam = navigation.getParam('otherParam', 'some default value');
       
       return (
         <ScrollView>
@@ -70,6 +65,12 @@ class CuidadosPage extends React.Component {
             //onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Terapias'})}
             color="#9268D0"
           />
+
+          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text></Text>
+            <Image style={{width: 200, height: 200}} source={require('../images/homeT.png')}/>
+          </View>
+
           </View>
         </View>
         </ScrollView>

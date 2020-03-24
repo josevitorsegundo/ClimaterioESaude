@@ -49,7 +49,7 @@ const TextAlimentos = () => {
             mensagens sobre alimentação veiculadas em propagandas comerciais (TV, internet, etc.).</Text>
             
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 200, height: 200}} source={require('../images/alimentos2.png')}/>
+            <Image style={{width: 250, height: 200}} source={require('../images/alimentos2.png')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>ILUSTRAÇÃO: alimento in natura, alimento processado e 

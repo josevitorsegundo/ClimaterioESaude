@@ -28,11 +28,11 @@ const TextSono = () => {
 
            <Text style={styles.textoSubtitulo}>• Abstenha-se de fazer exercícios físicos intensos até 
            quatro horas antes do horário de dormir e não faça atividades físicas após às 18h;</ Text>
-           <Text style={styles.textoSubtitulo}>•	Terapias integrativas e complementares tais como: 
+           <Text style={styles.textoSubtitulo}>• Terapias integrativas e complementares tais como: 
            acupuntura, ioga, dentre outras, ajudam na qualidade do sono;</Text>
             <Text style={styles.textoSubtitulo}>•	Atividades agradáveis, como ouvir música ou assistir TV, 
             devem ser realizadas fora do quarto de dormir;</Text>
-            <Text style={styles.textoSubtitulo}>•	Faça a última refeição até às 20h, evitando alimentos 
+            <Text style={styles.textoSubtitulo}>• Faça a última refeição até às 20h, evitando alimentos 
             calóricos ou “pesados”;</Text>
         </View>
         </ScrollView>
