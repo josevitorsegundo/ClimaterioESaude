@@ -68,7 +68,7 @@ class CuidadosPage extends React.Component {
 
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text></Text>
-            <Image style={{width: 200, height: 200}} source={require('../../assets/images/homeT.png')}/>
+            <Image style={{width: 200, height: 200}} source={require('../../assets/homeT.png')}/>
           </View>
 
           </View>
