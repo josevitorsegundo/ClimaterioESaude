@@ -33,29 +33,30 @@ class TextMassa extends Component {
   };
 
   handleCalculate = () => {
-  if (this.state.altura != 0 && this.state.massa != 0) { 
-  let imc = (this.state.massa)/ (this.state.altura * this.state.altura); // verificar condição
-  this.setState({
-    resultadoNumero: imc.toFixed(2)
-  });
-    if (imc < 24.9){
-    this.setState({ resultadoTexto:
-    "Adequado"});
-    } else if (imc > 24.9 && imc < 29.99){
-      this.setState({ resultadoTexto: 
-      "Sobrepeso"});
-    } else if (imc>=30){
-       this.setState( { resultadoTexto: 
-      "Obesidade"})
-    } else {
-     this.setState( { resultadoTexto: 
-        "Abaixo"})
-    }
+    if (this.state.altura != 0 && this.state.massa != 0) { 
+        console.log(` Massa: ${this.state.massa} Altura: ${this.state.altura} `);
+      let imc = (this.state.massa)/ (this.state.altura * this.state.altura); // verificar condição
+      console.log(imc);
+      this.setState({
+        resultadoNumero: imc.toFixed(2)
+      });
+        if (imc < 24.9){
+        this.setState({ resultadoTexto:
+        "Adequado"});
+        } else if (imc > 24.9 && imc < 29.99){
+          this.setState({ resultadoTexto: 
+          "Sobrepeso"});
+        } else if (imc>=30){
+          this.setState( { resultadoTexto: 
+          "Obesidade"})
+        } else {
+        this.setState( { resultadoTexto: 
+            "Abaixo"})
+        }
     } else{
       this.setState( { resultadoTexto: 
-        "ERROR"})
-    }
-   }
+        "ERROR"})}
+  }
     render(){
       var {height, widht} = Dimensions.get('window')
       const tabela1 = this.tabela1;
@@ -68,7 +69,7 @@ class TextMassa extends Component {
         obesidade</Text>
         
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 200, height: 200}} source={require('../images/peso1.jpg')}/>
+            <Image style={{width: 200, height: 200}} source={require('../../assets/images/peso1.jpg')}/>
           </View>
         
         <Text style={styles.textoSubtitulo}>Durante o envelhecimento feminino, ocorre redução do 
@@ -81,20 +82,23 @@ class TextMassa extends Component {
         
         <Text style={styles.textoSubtitulo}>Clique abaixo e insira sua altura e massa respectivamente: </Text>
         <View style={{padding:10}}>
+  
+        <TextInput
+            placeholder="Massa (exemplo: 50.5)"
+            keyboardType="decimal-pad"
+            maxLength={6}
+            style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#9268D0'}}
+            onChangeText={massa => {
+              this.setState({ massa });
+            }}
+        />
         <TextInput
           placeholder="Altura (exemplo: 1.53)"
-          keyboardType="numeric"
+          keyboardType="decimal-pad"
+          maxLength={5}
           style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#9268D0'}}
           onChangeText={altura => {this.setState({ altura });}}
           />
-          <TextInput
-              placeholder="Massa (exemplo: 50.5)"
-              keyboardType="numeric"
-              style={{textAlign: "center", fontSize: 20, borderWidth: 1, borderColor: '#9268D0'}}
-              onChangeText={massa => {
-                this.setState({ massa });
-              }}
-            />
         </View>
 
         <Button
@@ -103,42 +107,42 @@ class TextMassa extends Component {
           color="#9268D0"
         />
 
-          <View>
-          <Text style={{textAlign: "center", fontSize: 20}}>{this.state.resultadoNumero}</Text>
-          <Text style={{textAlign: "center", fontSize: 20}}>
-            {this.state.resultadoTexto}
-          </Text>
+        <View>
+        <Text style={{textAlign: "center", fontSize: 20}}>{this.state.resultadoNumero}</Text>
+        <Text style={{textAlign: "center", fontSize: 20}}>
+          {this.state.resultadoTexto}
+        </Text>
+        </View>
+
+
+        <View style={styles.tabelaStyleContainer}>
+        <Table borderStyle={{borderWidth: 2, borderColor: 'black'}}>
+        <Row data={tabela1.tableHead} style={styles.tabelaStyleHead} textStyle={styles.tabelaStyleText}/>
+        <Rows data={tabela1.tableData} textStyle={styles.tabelaStyleText}/>
+        </Table>
+        </View>
+
+          <Text style={styles.textoSubtitulo}>A medida da circunferência abdominal (medida da cintura) 
+          permite conhecer o risco de desenvolver doenças do coração e diabetes.</ Text>
+
+          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          <Image style={{width: 200, height: 200}} source={require('../../assets/images/peso2.jpg')}/>
           </View>
 
+          
 
           <View style={styles.tabelaStyleContainer}>
           <Table borderStyle={{borderWidth: 2, borderColor: 'black'}}>
-          <Row data={tabela1.tableHead} style={styles.tabelaStyleHead} textStyle={styles.tabelaStyleText}/>
-          <Rows data={tabela1.tableData} textStyle={styles.tabelaStyleText}/>
+          <Row data={tabela2.tableHead} style={styles.tabelaStyleHead} textStyle={styles.tabelaStyleText}/>
+          <Rows data={tabela2.tableData} textStyle={styles.tabelaStyleText}/>
           </Table>
           </View>
 
-           <Text style={styles.textoSubtitulo}>A medida da circunferência abdominal (medida da cintura) 
-           permite conhecer o risco de desenvolver doenças do coração e diabetes.</ Text>
-
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 200, height: 200}} source={require('../images/peso2.jpg')}/>
-            </View>
-
-            
-
-            <View style={styles.tabelaStyleContainer}>
-            <Table borderStyle={{borderWidth: 2, borderColor: 'black'}}>
-            <Row data={tabela2.tableHead} style={styles.tabelaStyleHead} textStyle={styles.tabelaStyleText}/>
-            <Rows data={tabela2.tableData} textStyle={styles.tabelaStyleText}/>
-            </Table>
-            </View>
-
-           <Text style={styles.textoSubtitulo}>•	As mulheres acima do peso, ou seja, com índice de massa 
-           corporal (IMC) de 25 a 29,9 kg/m², devem realizar um mínimo de 60 a 90 minutos de atividade 
-           física moderada, preferencialmente todos os dias da semana.</ Text>
-           <Text style={styles.textoSubtitulo}>•	Mulheres obesas devem realizar 300 minutos de atividade 
-           física por semana para reduzir a gordura corporal total.</ Text>
+          <Text style={styles.textoSubtitulo}>•	As mulheres acima do peso, ou seja, com índice de massa 
+          corporal (IMC) de 25 a 29,9 kg/m², devem realizar um mínimo de 60 a 90 minutos de atividade 
+          física moderada, preferencialmente todos os dias da semana.</ Text>
+          <Text style={styles.textoSubtitulo}>•	Mulheres obesas devem realizar 300 minutos de atividade 
+          física por semana para reduzir a gordura corporal total.</ Text>
       </View>
       </ScrollView>
       );

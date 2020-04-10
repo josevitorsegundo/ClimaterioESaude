@@ -15,7 +15,7 @@ LocaleConfig.locales['pt'] = {
 
 LocaleConfig.defaultLocale = 'pt';
 
-import TextDiario from '../texts/textDiario';
+//import TextDiario from '../texts/textDiario';
 
 class ChamaCalendario extends React.Component {
     static navigationOptions = ({ navigation, navigationOptions }) => {

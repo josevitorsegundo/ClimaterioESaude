@@ -18,7 +18,7 @@ const TextSintomas = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/sintomas1.jpg')}/>
+            source={require('../../assets/images/sintomas1.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Nem todas as mulheres terão sintomas no período 
@@ -50,7 +50,7 @@ const TextSintomas = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/sintomas2.jpg')}/>
+            source={require('../../assets/images/sintomas2.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>A insônia acontece quando ocorre dificuldade para 
@@ -102,7 +102,7 @@ const TextSintomas = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/sintomas3.jpg')}/>
+            source={require('../../assets/images/sintomas3.jpg')}/>
             </View>
             
             <Text style={styles.textoSubtitulo}>Na pós-menopausa, a queda dos níveis do hormônio 
@@ -113,7 +113,7 @@ const TextSintomas = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/sintomas4.jpg')}/>
+            source={require('../../assets/images/sintomas4.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Devido à perda da elasticidade dos tecidos da vagina, 
@@ -138,7 +138,7 @@ const TextSintomas = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/sintomas5.jpg')}/>
+            source={require('../../assets/images/sintomas5.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Fogachos são ondas de calor que ocorrem na parte superior 
@@ -176,7 +176,7 @@ const TextSintomas = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/sintomas6.jpg')}/>
+            source={require('../../assets/images/sintomas6.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Grande parte das mulheres atravessa o climatério de 

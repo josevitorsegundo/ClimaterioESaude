@@ -12,7 +12,7 @@ const TextSexo = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/sexo1.jpg')}/>
+            source={require('../../assets/images/sexo1.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>A sexualidade e sensualidade não dependem da idade e 

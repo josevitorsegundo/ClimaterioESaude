@@ -14,7 +14,7 @@ const TextTerapias = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/terapias1.jpg')}/>
+            source={require('../../assets/images/terapias1.jpg')}/>
             </View>
             
             <Text style={styles.textoSubtitulo}>A terapia hormonal (TH) é uma alternativa para alívio e 
@@ -62,9 +62,9 @@ const TextTerapias = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/terapias2.jpg')}/>
+            source={require('../../assets/images/terapias2.jpg')}/>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/terapias3.jpg')}/>
+            source={require('../../assets/images/terapias3.jpg')}/>
             </View>
             
             <Text style={styles.textoSubtitulo}>As práticas integrativas complementares (PIC), associadas 
@@ -108,7 +108,7 @@ const TextTerapias = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/terapias4.jpg')}/>
+            source={require('../../assets/images/terapias4.jpg')}/>
             <Text> </Text>
             </View>
         </View>

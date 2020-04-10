@@ -10,7 +10,7 @@ const TextSono = () => {
           <Text style={styles.textoTitulo}>• Adote cuidados para ter um sono saudável no climatério</Text>
 
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{width: 200, height: 200}} source={require('../images/sono1.jpg')}/>
+            <Image style={{width: 200, height: 200}} source={require('../../assets/images/sono1.jpg')}/>
           </View>
 
           <Text style={styles.textoSubtitulo}>A higiene do sono é a adoção de hábitos diários que 

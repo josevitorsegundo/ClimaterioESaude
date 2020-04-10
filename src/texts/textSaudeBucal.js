@@ -12,7 +12,7 @@ const TextSaudeBucal = () => {
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text> </Text>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/saudeBucal2.jpg')}/>
+            source={require('../../assets/images/saudeBucal2.jpg')}/>
             </View>
 
             <Text style={styles.textoSubtitulo}>Devido às mudanças hormonais naturais do envelhecimento 
@@ -49,7 +49,7 @@ const TextSaudeBucal = () => {
 
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image style={{width: 200, height: 200}} 
-            source={require('../images/saudeBucal3.jpg')}/>
+            source={require('../../assets/images/saudeBucal3.jpg')}/>
             <Text> </Text>
             </View>
 
