@@ -34,9 +34,7 @@ class TextMassa extends Component {
 
   handleCalculate = () => {
     if (this.state.altura != 0 && this.state.massa != 0) { 
-        console.log(` Massa: ${this.state.massa} Altura: ${this.state.altura} `);
       let imc = (this.state.massa)/ (this.state.altura * this.state.altura); // verificar condição
-      console.log(imc);
       this.setState({
         resultadoNumero: imc.toFixed(2)
       });
