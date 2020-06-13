@@ -33,12 +33,16 @@ class TextMassa extends Component {
   };
 
   handleCalculate = () => {
-    if (this.state.altura != 0 && this.state.massa != 0) { 
-      let imc = (this.state.massa)/ (this.state.altura * this.state.altura); // verificar condição
+      this.state.massa = this.state.massa.replace(",",".");
+      this.state.altura = this.state.altura.replace(",",".");
+    
+      if (this.state.altura != 0 && this.state.massa != 0) { 
+      
+        let imc = (this.state.massa)/(this.state.altura * this.state.altura); // verificar condição
       this.setState({
         resultadoNumero: imc.toFixed(2)
       });
-        if (imc < 24.9){
+        if (imc >= 18.5 && imc <= 24.9){
         this.setState({ resultadoTexto:
         "Adequado"});
         } else if (imc > 24.9 && imc < 29.99){
@@ -47,10 +51,13 @@ class TextMassa extends Component {
         } else if (imc>=30){
           this.setState( { resultadoTexto: 
           "Obesidade"})
-        } else {
+        } else if (imc>0 && imc <18.5) {
         this.setState( { resultadoTexto: 
             "Abaixo"})
         }
+        else{
+          this.setState( { resultadoTexto: 
+            "ERROR"})}
     } else{
       this.setState( { resultadoTexto: 
         "ERROR"})}
@@ -60,6 +67,10 @@ class TextMassa extends Component {
       const tabela1 = this.tabela1;
       const tabela2 = this.tabela2;
     
+      
+      //Teste
+      //console.log(this.state);
+      
       return (
       <ScrollView>
       <View style={styles.container}>
@@ -104,7 +115,7 @@ class TextMassa extends Component {
           onPress={this.handleCalculate}
           color="#9268D0"
         />
-
+        
         <View>
         <Text style={{textAlign: "center", fontSize: 20}}>{this.state.resultadoNumero}</Text>
         <Text style={{textAlign: "center", fontSize: 20}}>
