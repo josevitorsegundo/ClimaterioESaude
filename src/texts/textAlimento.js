@@ -7,7 +7,7 @@ const TextAlimentos = () => {
       return (
         <ScrollView>
         <View style={styles.container}>
-          <Text style={styles.textoTitulo}>• Prefira alimentação saudável </Text>
+          <Text style={styles.textoTitulo}>Prefira alimentação saudável </Text>
 
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <Image style={{width: 200, height: 200}} source={require('../../assets/images/alimentos1.jpg')}/>
@@ -15,10 +15,10 @@ const TextAlimentos = () => {
 
           <Text style={styles.textoSubtitulo}>Adotar alimentação saudável durante toda a vida e 
           manter esse hábito no climatério pode diminuir o risco de adquirir doenças do coração, 
-          diabetes, obesidade, osteoporose e demência.</Text>
+          diabetes, obesidade, osteoporose e demência (HARVIE, HOWELL, EVANS, 2015).</Text>
           
           <Text style={styles.textoTitulo}>Conheça e siga os dez passos para uma alimentação 
-          saudável</Text>
+          saudável (BRASIL, 2014; RODRIGUEZ-GARCIA et al., 2019):</Text>
           
           <Text style={styles.textoSubtitulo}>Passo 1 - Faça dos alimentos in natura (naturais) a base 
           da sua alimentação: grãos, raízes, tubérculos, farinhas, legumes, verduras, frutas, castanhas, 

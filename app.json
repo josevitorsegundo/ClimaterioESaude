@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "projetoExpo1",
+    "name": "Climatério e Saúde",
     "slug": "projetoExpo1",
     "privacy": "public",
     "sdkVersion": "35.0.0",
@@ -24,7 +24,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.devUFPI.climaterioesaude"
+    },
+    "android":{
+      "package": "com.devUFPI.climaterioesaude"
     }
   }
 }

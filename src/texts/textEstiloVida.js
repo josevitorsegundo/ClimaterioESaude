@@ -16,7 +16,7 @@ const TextEstilo = () => {
             
           <Text style={styles.textoSubtitulo}>Durante o climatério, é fundamental adotar um estilo de 
           vida saudável. Estas atitudes ajudam a diminuir os sintomas que podem alterar a sua qualidade 
-          de vida nesse período:</Text>
+          de vida nesse período (BRASIL, 2016):</Text>
           
         </View>
         </ScrollView>

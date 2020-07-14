@@ -7,7 +7,7 @@ const TextSono = () => {
       return (
         <ScrollView>
         <View style={styles.container}>
-          <Text style={styles.textoTitulo}>• Adote cuidados para ter um sono saudável no climatério</Text>
+          <Text style={styles.textoTitulo}>Adote cuidados para ter um sono saudável no climatério</Text>
 
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image style={{width: 200, height: 200}} source={require('../../assets/images/sono1.jpg')}/>
@@ -17,7 +17,8 @@ const TextSono = () => {
           favorecem o equilíbrio entre as horas de sono e as horas em que se fica acordado, a fim de 
           ajudar o corpo a manter seu funcionamento adequado e diminuir o risco de doenças.</Text>
           
-          <Text style={styles.textoTitulo}>Siga estas recomendações para ter um sono de qualidade:</Text>
+          <Text style={styles.textoTitulo}>Siga estas recomendações para ter um sono de qualidade 
+          (BRASIL, 2019; VIGETA et al., 2013):</Text>
           
           <Text style={styles.textoSubtitulo}>•	Durma de sete a oito horas por dia;</Text>
           <Text style={styles.textoSubtitulo}>•	Estabeleça horário regular para dormir e acordar;</Text>

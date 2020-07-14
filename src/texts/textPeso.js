@@ -74,7 +74,7 @@ class TextMassa extends Component {
       return (
       <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.textoTitulo}>• Mantenha o peso normal para prevenir sobrepeso e 
+        <Text style={styles.textoTitulo}>Mantenha o peso normal para prevenir sobrepeso e 
         obesidade</Text>
         
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -84,7 +84,7 @@ class TextMassa extends Component {
         <Text style={styles.textoSubtitulo}>Durante o envelhecimento feminino, ocorre redução do 
         metabolismo. No climatério, o ganho de peso chega a 800 gramas por ano, podendo haver um aumento 
         de até 20% na gordura corporal. Manter-se ativa ou em movimento colabora para acelerar o 
-        metabolismo e diminuir o ganho de peso.</Text>
+        metabolismo e diminuir o ganho de peso (BRASIL, 2010).</Text>
         
         <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado, calcule seu índice de 
         massa corporal (IMC). </Text>
@@ -149,9 +149,9 @@ class TextMassa extends Component {
 
           <Text style={styles.textoSubtitulo}>•	As mulheres acima do peso, ou seja, com índice de massa 
           corporal (IMC) de 25 a 29,9 kg/m², devem realizar um mínimo de 60 a 90 minutos de atividade 
-          física moderada, preferencialmente todos os dias da semana.</ Text>
+          física moderada, preferencialmente todos os dias da semana (LEE et al., 2017).</ Text>
           <Text style={styles.textoSubtitulo}>•	Mulheres obesas devem realizar 300 minutos de atividade 
-          física por semana para reduzir a gordura corporal total.</ Text>
+          física por semana para reduzir a gordura corporal total (FRIEDENREICH et al., 2015).</ Text>
       </View>
       </ScrollView>
       );
