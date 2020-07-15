@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-      //flex: 1,
+      flex: 1,
+      flexGrow: 1,
       //backgroundColor: 'black',
       justifyContent: 'flex-start',
     },
@@ -16,6 +17,14 @@ const styles = StyleSheet.create({
     textoSubtitulo:{
       padding: 10,
       paddingLeft: 30,
+      paddingRight: 30,
+      color: 'black',
+      fontSize: 20,
+      textAlign: 'justify',
+    },
+    textoSubtituloL:{
+      padding: 10,
+      paddingLeft: 40,
       paddingRight: 30,
       color: 'black',
       fontSize: 20,
@@ -36,6 +45,9 @@ const styles = StyleSheet.create({
       color: 'blue',
       fontSize: 20,
       textAlign: 'justify',
+    },
+    textoQL:{
+      color: 'white',
     },
     buttonStyle:{
       margin: 20,

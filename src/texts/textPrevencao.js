@@ -134,14 +134,14 @@ const TextPrevencao = () => {
            
             <Text style={styles.textoSubtitulo}>• Conheça e pratique exercícios que auxiliam no 
             fortalecimento muscular, alongamento e melhoram o equilíbrio na Cartilha da Sociedade 
-            Brasileira de Reumatologia que está disponível no link:</ Text>
-
+            Brasileira de Reumatologia que está disponível no link: 
             <Text  
             textContentType= 'URL'
             onPress={()=> Linking.openURL('https://www.reumatologia.org.br/download/osteoporose/')} 
             style={styles.textoLinkingSite}>https://www.reumatologia.org.br/download/osteoporose/
             </ Text>
-            
+            </ Text>
+
             <Text style={styles.textoTitulo}>Como é feito o diagnóstico da osteoporose?</ Text>
 
             <Text style={styles.textoSubtitulo}>A densidade mineral óssea (DMO) avalia a força e qualidade 
@@ -288,16 +288,16 @@ const TextPrevencao = () => {
 
             <Text style={styles.textoSubtitulo}>• Realize mamografia anualmente a partir de 40 anos</ Text>
             
-            {/*Aqui testar mais padding left para ajuste de duas linhas para esse texto*/}
             <Text style={styles.textoSubtitulo}>• Tenha medidas de autocuidado como o hábito de 
             observação das mamas para que reconheça sinais e sintomas suspeitos:</ Text>
-            <Text style={styles.textoSubtitulo}>o Na posição deitada e em pé observar a aparência e 
+            <Text style={styles.textoSubtituloL}>o Na posição deitada e em pé observar a aparência e 
             contorno das mamas em frente a um espelho</ Text>
             {/*São sinais suspeitos -- em negrito -- tem um exemplo em textTerapias*/}
-            <Text style={styles.textoSubtitulo}>o São sinais suspeitos: nódulos (caroços) nas mamas e 
-            axilas, saída de secreção com sangue pelos mamilos (bico dos seios), manchas vermelhas nas 
-            mamas, diferença de tamanho das mamas, edema (inchaço), pele da mama enrugada ou com aparência 
-            de casca de laranja, mudança no formato dos mamilos.</ Text>
+            <Text style={styles.textoSubtituloL}>o <Text style={{fontWeight: 'bold'}}>São sinais 
+            suspeitos:</Text> nódulos (caroços) nas mamas e axilas, saída de secreção com sangue pelos 
+            mamilos (bico dos seios), manchas vermelhas nas mamas, diferença de tamanho das mamas, 
+            edema (inchaço), pele da mama enrugada ou com aparência de casca de laranja, mudança no 
+            formato dos mamilos.</ Text>
 
             <Text style={styles.textoSubtitulo}>• Adote estilo de vida saudável: não fume e evite bebidas 
             alcoólicas</ Text>
