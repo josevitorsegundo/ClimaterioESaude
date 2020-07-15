@@ -14,16 +14,19 @@ class TextDiario extends Component {
       entrada: '',
       limite: null,
       page: 0,
+      horas: 
+      '04:00 - \n05:00 -\n06:00 -\n07:00 -\n08:00 -\n09:00 -\n10:00 -\n11:00 -\n12:00 -\n13:00 -\n14:00 -\n15:00 -\n16:00 -\n17:00 -\n18:00 -\n19:00 -\n20:00 -\n21:00 -\n22:00 -\n23:00 -\n00:00 -\n01:00 -\n02:00 -\n03:00 -\n',
       pages: [
         {
-          info: 'Seu diário'
+          info: 
+          '04:00 - \n05:00 -\n06:00 -\n07:00 -\n08:00 -\n09:00 -\n10:00 -\n11:00 -\n12:00 -\n13:00 -\n14:00 -\n15:00 -\n16:00 -\n17:00 -\n18:00 -\n19:00 -\n20:00 -\n21:00 -\n22:00 -\n23:00 -\n00:00 -\n01:00 -\n02:00 -\n03:00 -\n'
         }
       ],
     }
   }
   verifLengthText = (text) =>{
     this.setState({ entrada: text })
-    if(String(text).length === 200){
+    if(String(text).length === 4000){
       alert("Tamanho Maximo Atingido")
     }else{
       var pages = this.state.pages
@@ -60,6 +63,18 @@ class TextDiario extends Component {
         }
       }
       console.log('salvo')
+      Alert.alert(
+        "",
+        "Salvo com sucesso",
+        [
+        {
+        text: "OK", onPress: ()=>
+        console.log("OK Pressed")
+        }
+        ],
+        {cancelable: false}
+      );
+
     } catch (error){
       console.log('error no salvar')
     }
@@ -109,10 +124,11 @@ _retrieveData = async () => {
   }
   addPage = () =>{
     var pages = this.state.pages
-    pages[pages.length] = {info : ''}
+    pages[pages.length] = {info : this.state.horas}
     this.setState({
       pages: pages
     })
+    this.backOrNext(true);
     Alert.alert('Página adicionada', null, [
       {text: 'OK', onPress: () => console.log('Ok pressed')}
     ],
@@ -153,7 +169,7 @@ _retrieveData = async () => {
           <Text style={styles.textoTitulo}>Escreva aqui o seu diário: </Text>
           <TextInput
           multiline={true}
-          maxLength={200}
+          maxLength={4000}
           placeholder="Digite aqui"
           defaultValue={this.state.pages[this.state.page].info}
           keyboardType="default"
