@@ -18,7 +18,7 @@ const TextSexo = () => {
             <Text style={styles.textoSubtitulo}>A sexualidade e sensualidade não dependem da idade e 
             continuam fazendo parte da vida após a menopausa. Entretanto, nesse período, algumas 
             mulheres podem enfrentar transtornos, que são causados pela diminuição dos hormônios 
-            femininos.</Text>
+            femininos (BRASIL, 2018).</Text>
             <Text style={styles.textoSubtitulo}>Recomenda-se:</Text>
             <Text style={styles.textoSubtitulo}>• Usar lubrificantes vaginais à base de água, nas 
             relações sexuais, para diminuir os efeitos do ressecamento vaginal. Os lubrificantes 

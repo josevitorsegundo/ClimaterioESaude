@@ -18,8 +18,8 @@ const TextSaudeBucal = () => {
             <Text style={styles.textoSubtitulo}>Devido às mudanças hormonais naturais do envelhecimento 
             feminino, ocorrem alterações na estrutura dos ossos da face. O uso de fumo e a higiene 
             inadequada da boca também podem causar problemas como cáries, inflamação na gengiva e/ou no 
-            osso que sustenta os dentes. A inflamação nessas estruturas pode ocasionar a perda de dentes. 
-            Siga as recomendações para ter uma boa saúde bucal:</Text>
+            osso que sustenta os dentes levando à sua. Siga as recomendações para ter uma boa saúde 
+            bucal (BRASIL, 2008; BRASIL, 2018):</Text>
 
             <Text style={styles.textoSubtitulo}>•	Escove os dentes todos os dias e após cada refeição, 
             além de uma última vez antes de dormir;</Text>

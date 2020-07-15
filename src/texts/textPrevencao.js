@@ -366,7 +366,7 @@ const TextPrevencao = () => {
             <Text style={styles.textoSubtitulo}>• O preservativo masculino deve ser colocado e 
             retirado ainda com o pênis ereto (duro), para evitar vazamento de esperma;</ Text>
             <Text style={styles.textoSubtitulo}>• Deve-se deixar espaço da ponta do preservativo 
-            masculino para que receba o esperma, (BRASIL, 2019).;</ Text>
+            masculino para que receba o esperma (BRASIL, 2019).;</ Text>
 
         </View>
         </ScrollView>
