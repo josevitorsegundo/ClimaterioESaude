@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, TextInput, Dimensions, Button, Icon, Alert, FlatList } from 'react-native';
+import { Text, View, ScrollView, TextInput, Dimensions, Button, Alert } from 'react-native';
 import styles from '../styles/stylesText';
 import {AsyncStorage} from 'react-native';
 

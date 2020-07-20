@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, TextInput, TouchableOpacity, Dimensions, Button, Image } from 'react-native';
+import { Text, View, ScrollView, TextInput, TouchableOpacity, Dimensions, Button, Image, Alert } from 'react-native';
 import styles from '../styles/stylesText';
 import { Table, Row, Rows } from 'react-native-table-component';
 
@@ -36,7 +36,7 @@ class TextMassa extends Component {
       this.state.massa = this.state.massa.replace(",",".");
       this.state.altura = this.state.altura.replace(",",".");
     
-      if (this.state.altura != 0 && this.state.massa != 0) { 
+      if ((this.state.altura != 0 && this.state.massa != 0) && (this.state.altura > 0 && this.state.massa > 0)) { 
       
         let imc = (this.state.massa)/(this.state.altura * this.state.altura); // verificar condição
       this.setState({
@@ -56,9 +56,19 @@ class TextMassa extends Component {
             "Abaixo"})
         }
         else{
+          Alert.alert('Valor inválido inserido', null, [
+            {text: 'OK'}
+          ],
+          {cancelable: false})
+          this.setState({resultadoNumero: "NULL"}) 
           this.setState( { resultadoTexto: 
             "ERROR"})}
     } else{
+      Alert.alert('Valor inválido inserido', null, [
+        {text: 'OK'}
+      ],
+      {cancelable: false})
+      this.setState({resultadoNumero: "NULL"})
       this.setState( { resultadoTexto: 
         "ERROR"})}
   }

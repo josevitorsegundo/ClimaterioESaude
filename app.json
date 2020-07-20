@@ -11,9 +11,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon2.png",
+    "icon": "./assets/icon3.png",
     "splash": {
-      "image": "./assets/icon2.png",
+      "image": "./assets/icon3.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,10 +25,12 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.devUFPI.climaterioesaude"
+      "bundleIdentifier": "com.devUFPI.climaterioesaude",
+      "buildNumber": "1.0.0"
     },
     "android":{
-      "package": "com.devUFPI.climaterioesaude"
+      "package": "com.devUFPI.climaterioesaude",
+      "versionCode": 1
     }
   }
 }
