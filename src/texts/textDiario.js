@@ -124,7 +124,7 @@ _retrieveData = async () => {
   }
   addPage = () =>{
     var pages = this.state.pages
-    pages[pages.length] = {info : this.state.horas}
+    pages[pages.length] = {info : ''}
     this.setState({
       pages: pages
     })
