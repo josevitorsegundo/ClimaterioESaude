@@ -24,7 +24,8 @@
     "lodash": " >=4.17.19 ",
     "minimist": ">=1.2.3",
     "mem": ">=4.0.0",
-    "braces": ">=2.3.1"
+    "braces": ">=2.3.1",
+    "logkitty": ">=0.7.1"
   },
   "devDependencies": {
     "babel-preset-expo": "^7.1.0",
