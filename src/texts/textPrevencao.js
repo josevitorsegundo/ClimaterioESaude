@@ -9,7 +9,6 @@ import styles from '../styles/stylesText';
 
 
 const TextPrevencao = () => {
-    //webkitURL = "www.google.com"; 
     
     return (
         <ScrollView>
