@@ -3,7 +3,7 @@
     "name": "Climatério e Saúde",
     "slug": "projetoExpo1",
     "privacy": "public",
-    "sdkVersion": "35.0.0",
+    "sdkVersion": "38.0.0",
     "platforms": [
       "ios",
       "android"
