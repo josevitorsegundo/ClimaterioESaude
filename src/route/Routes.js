@@ -1,7 +1,7 @@
-import { createAppContainer, NavigationActions } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator} from 'react-navigation-stack';
 import { YellowBox } from 'react-native';
-//import Icon from 'react-native-vector-icons/FontAwesome';
+
 YellowBox.ignoreWarnings(['Accessing view manager']);
 
 //Import das screens
