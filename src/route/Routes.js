@@ -4,7 +4,7 @@ import { YellowBox } from 'react-native';
 
 YellowBox.ignoreWarnings(['Accessing view manager']);
 
-//Import das screens
+//Import of the screens
 import ChamaDiario from '../screens/ChamaDiario';
 import CuidadosPage from '../screens/CuidadosPage';
 import ChamaTextGeral from '../screens/ChamaTextGeral';
