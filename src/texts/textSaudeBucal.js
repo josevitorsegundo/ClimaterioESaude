@@ -42,7 +42,7 @@ const TextSaudeBucal = () => {
             <Text style={styles.textoSubtitulo}>•	Evite alimentos salgados ou condimentados;</ Text>
             <Text style={styles.textoSubtitulo}>•	Procure o dentista se a prótese ficar solta e 
             dificultar a mastigação ou estiver machucando a gengiva;</ Text>
-            <Text style={styles.textoSubtitulo}>•	Observe regularmente sua boca procurando alterações 
+            <Text style={styles.textoSubtitulo}>Observe regularmente sua boca procurando alterações 
             nos lábios, bochechas e gengivas, céu da boca, garganta e abaixo da língua. Manchas, 
             caroços, inchaços, placas esbranquiçadas ou avermelhadas e feridas que não cicatrizam 
             (mesmo sem dor) são sinais de alerta para o câncer de boca.</ Text>

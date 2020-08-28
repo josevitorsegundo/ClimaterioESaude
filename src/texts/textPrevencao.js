@@ -27,7 +27,9 @@ const TextPrevencao = () => {
             </View>
 
             <Text style={styles.textoSubtitulo}>As doenças cardiovasculares ocupam o primeiro lugar 
-            como causa de morte feminina. Saiba o que fazer para prevenir infarto, angina, 
+            como causa de morte feminina.</Text>
+
+            <Text style={styles.textoSubtitulo}> Saiba o que fazer para prevenir infarto, angina, 
             aterosclerose (enrijecimento das artérias), dislipidemia (elevação dos níveis de gorduras ruins 
             e diminuição das gorduras boas), diabetes tipo 2, Hipertensão arterial (pressão alta), obesidade, 
             acidente vascular encefálico.</Text>
@@ -95,7 +97,7 @@ const TextPrevencao = () => {
 
             <Text style={styles.textoSubtitulo}>• Inclua na alimentação alimentos ricos em vitamina D e 
             Cálcio para prevenir a osteoporose: leite, iogurte, queijos, couve, agrião, espinafre, taioba, 
-            brócolis, repolho, sardinha e castanhas, (BRASIL,2016).</ Text>
+            brócolis, repolho, sardinha e castanhas (BRASIL,2016).</ Text>
             <Text style={styles.textoSubtitulo}>• Pessoas com intolerância à lactose podem optar por 
             bebidas à base de soja, amêndoa e arroz fortificados com cálcio (CANADÁ, 2019).</ Text>
             <Text style={styles.textoSubtitulo}>• Inclua ameixas secas como parte de suas recomendações de 
@@ -158,11 +160,16 @@ const TextPrevencao = () => {
             <Text style={styles.textoTitulo}>Fatores de risco</ Text>
 
             <Text style={styles.textoSubtitulo}>O câncer do colo de útero ocorre quando há um crescimento 
-            desordenado das células deste órgão. A infecção pelo papilomavírus humano (HPV), é um fator 
+            desordenado das células deste órgão.</ Text>
+            
+            <Text style={styles.textoSubtitulo}>A infecção pelo papilomavírus humano (HPV), é um fator 
             importante para o surgimento deste câncer, estando presente em 70% dos casos.</ Text>
+
             <Text style={styles.textoSubtitulo}>Cerca de 80% das mulheres sexualmente ativas são 
             contaminadas pelo HPV ao longo de sua vida, e 32% são infectadas pelos tipos de HPV 
             que desenvolvem lesões de câncer.</ Text>
+
+            
 
             <Text style={styles.textoTitulo}>Alterações no colo</ Text>
 
@@ -192,8 +199,9 @@ const TextPrevencao = () => {
             <Text style={styles.textoSubtitulo}>• Use preservativo desde o início em todas as relações</ Text>
             <Text style={styles.textoSubtitulo}>• O preservativo feminino é mais eficaz na prevenção 
             contra o vírus HPV</ Text>
-            <Text style={styles.textoSubtitulo}>• Evite ter mais de um parceiro sexual</ Text>
-            <Text style={styles.textoSubtitulo}>• Realize higiene pessoal</ Text>
+            <Text style={styles.textoSubtitulo}>• Mulheres até 45 de idade podem vacinar-se contra HPV, 
+            mesmo se já tiverem tido infecção prévia por este vírus pois, a vacina protege contra os tipos 
+            do vírus que causam câncer;</ Text>
             
             <Text style={styles.textoTitulo}>Rastreamento</ Text>
             
@@ -227,13 +235,13 @@ const TextPrevencao = () => {
             <Text style={styles.textoTitulo}>Cuidados antes da realização da citologia do colo 
             uterino (RABELO, 2019):</ Text>
 
-             <Text style={styles.textoSubtitulo}>• Não realizar ultrassonografia transvaginal dois dias 
+             <Text style={styles.textoSubtitulo}>- Não realizar ultrassonografia transvaginal dois dias 
             antes do exame, pois o gel utilizado interfere na qualidade da amostra</ Text>
-            <Text style={styles.textoSubtitulo}>• Não usar gel, lubrificantes, espermicidas ou medicações 
+            <Text style={styles.textoSubtitulo}>- Não usar gel, lubrificantes, espermicidas ou medicações 
             vaginais dois dias antes do exame</ Text>
-            <Text style={styles.textoSubtitulo}>• Não usar preservativos com lubrificantes dois dias 
+            <Text style={styles.textoSubtitulo}>- Não usar preservativos com lubrificantes dois dias 
             antes do exame;</ Text>
-            <Text style={styles.textoSubtitulo}>• Se estiver no período menstrual, adiar o exame para o 
+            <Text style={styles.textoSubtitulo}>- Se estiver no período menstrual, adiar o exame para o 
             quinto dia após o fim da menstruação, a menos que o sangramento vaginal seja anormal. Isto 
             indica a coleta do exame.</ Text>
            
@@ -364,8 +372,8 @@ const TextPrevencao = () => {
             vagina; guiar o pênis para o centro do anel externo durante a penetração;</ Text>
             <Text style={styles.textoSubtitulo}>• O preservativo masculino deve ser colocado e 
             retirado ainda com o pênis ereto (duro), para evitar vazamento de esperma;</ Text>
-            <Text style={styles.textoSubtitulo}>• Deve-se deixar espaço da ponta do preservativo 
-            masculino para que receba o esperma (BRASIL, 2019).;</ Text>
+            <Text style={styles.textoSubtitulo}>Deve-se deixar espaço da ponta do preservativo 
+            masculino para que receba o esperma (BRASIL, 2019).</ Text>
 
         </View>
         </ScrollView>

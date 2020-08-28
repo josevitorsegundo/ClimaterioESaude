@@ -32,7 +32,7 @@ const TextTerapias = () => {
             devendo ser usada pelo menor tempo possível e interrompida quando os sintomas melhorarem, 
             de acordo com orientação médica (BRASIL, 2018).</Text>
 
-            <Text style={styles.textoTitulo}>Indicações e contra- indicações da Terapia Hormonal 
+            <Text style={styles.textoTitulo}>Indicações e contraindicações da Terapia Hormonal 
             (TH)</Text>
 
             <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>São indicações para TH: 
@@ -40,7 +40,7 @@ const TextTerapias = () => {
             dor durante as relações sexuais ou ao urinar, tratamento da menopausa precoce 
             (antes de 40 anos) e prevenção da osteoporose (BRASIL, 2010; BRASIL, 2016; BRASIL, 2018).</Text>
 
-            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>São contra-indicações 
+            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>São contraindicações 
             para uso da TH: </Text>mulheres com doença atual do fígado, câncer de mama ou lesões que 
             podem causar câncer de mama ou de endométrio (camada que reveste internamente o útero), 
             sangramento vaginal de causa desconhecida, trombose, doença das coronárias, lúpus, doenças 
@@ -88,23 +88,27 @@ const TextTerapias = () => {
 
             <Text style={styles.textoSubtitulo}>Conheça algumas terapias complementares que podem reduzir 
             os sintomas do climatério:</Text>
-            <Text style={styles.textoSubtitulo}>•	Acupuntura: terapia na qual são inseridas agulhas para 
+            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>•	Acupuntura 
+             </Text>: terapia na qual são inseridas agulhas para 
             estimular pontos do corpo com objetivo de prevenir e tratar doenças;</Text>
-            <Text style={styles.textoSubtitulo}>•	Homeopatia: prática que compreende o indivíduo em seus 
+            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>•	Homeopatia 
+             </Text>: prática que compreende o indivíduo em seus 
             aspectos físico, psicológico e social. Nos tratamentos homeopáticos há uso reduzido de 
             medicamentos;</Text>
-            <Text style={styles.textoSubtitulo}>•	Meditação, ioga e alongamento auxiliam na redução do 
+            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>•	Meditação 
+             </Text>, ioga e alongamento auxiliam na redução do 
             stress e sintomas climatéricos;</Text>
-            <Text style={styles.textoSubtitulo}>•	Terapias com florais: é o uso de essências de flores 
-            para o equilíbrio das emoções;</Text>
-            
-            <Text style={styles.textoSubtitulo}>Terapias com florais: é o uso de essências de flores 
+            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>•	Terapias com florais 
+             </Text>: é o uso de essências de flores 
             para o equilíbrio das emoções; Meditação, ioga e alongamento auxiliam na redução do stress e 
             sintomas climatéricos;</Text>
-            <Text style={styles.textoSubtitulo}>Fitoterapia: são tratamentos à base de plantas 
+            
+            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>• Fitoterapia 
+             </Text>: são tratamentos à base de plantas 
             medicinais. Conheça alguns fitoterápicos que podem ser usadas no climatério;</Text>
            
-            <Text style={styles.textoSubtitulo}>Produtos contendo isoflavonas: soja e derivados, 
+            <Text style={styles.textoSubtitulo}><Text style={{fontWeight: 'bold'}}>• Produtos contendo isoflavonas 
+             </Text>: soja e derivados, 
             amendoim, trifolium (pratense L.) ou trevo vermelho (redclover), kudzu (Puerarialobata), 
             hipérico (Hipericoperforatum); valeriana (Valeriana officinalis), melissa 
             (Melissa officinalis), passiflora, valeriana e avenna sativa (aveia) são usadas para alívio 

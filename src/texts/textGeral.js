@@ -15,7 +15,7 @@ import TextSono from './textSono';
 
 const TextGeral = ({ind}) => {
     const tela = (
-      ind === 'Sexo' ? <TextSexo/> : 
+      ind === 'Sexualidade' ? <TextSexo/> : 
       ind === 'Saúde Bucal' ? <TextSaudeBucal/> : 
       ind === 'Terapia Hormonal e práticas complementares' ? <TextTerapias/> :  
       ind === 'Prevenção de Doenças' ? <TextPrevencao/> : 

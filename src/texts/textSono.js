@@ -33,7 +33,7 @@ const TextSono = () => {
            acupuntura, ioga, dentre outras, ajudam na qualidade do sono;</Text>
             <Text style={styles.textoSubtitulo}>•	Atividades agradáveis, como ouvir música ou assistir TV, 
             devem ser realizadas fora do quarto de dormir;</Text>
-            <Text style={styles.textoSubtitulo}>• Faça a última refeição até às 20h, evitando alimentos 
+            <Text style={styles.textoSubtitulo}>Faça a última refeição até às 20h, evitando alimentos 
             calóricos ou “pesados”;</Text>
         </View>
         </ScrollView>

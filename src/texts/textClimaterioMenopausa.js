@@ -21,6 +21,8 @@ const TextClimaterioMenopausa = () => {
             reprodutiva, normalmente acontece entre os 40 e 65 anos. É um período natural que faz parte 
             do envelhecimento da mulher, trazendo mudanças no corpo, nos aspectos psicológicos e 
             sociais (BRASIL, 2016). </Text>
+            <Text style={styles.textoSubtitulo}>É necessário entender que cada mulher é diferente um da outra, 
+            e que, não necessariamente todas as mulheres entrarão no climatério ao completarem 40 anos.  </Text>
             
             <Text style={styles.textoTitulo}>O que é menopausa? </Text>
             <Text style={styles.textoSubtitulo}>A menopausa é a última menstruação e ocorre, em média, 

@@ -26,7 +26,7 @@ const TextSexo = () => {
             <Text style={styles.textoSubtitulo}>• Buscar auxílio médico em caso de dor, ressecamento 
             não aliviado pelo uso de lubrificantes ou sangramento durante as relações sexuais, para que 
             sejam fornecidas outras opções de tratamentos para alívio desses sintomas;</Text>
-            <Text style={styles.textoSubtitulo}>• Há certas condições que podem interferir na vida 
+            <Text style={styles.textoSubtitulo}>Há certas condições que podem interferir na vida 
             sexual, tais como: diabetes, colesterol alto, fumo, álcool, menopausa e alguns medicamentos. 
             Converse com um profissional de saúde.</ Text>
         </View>

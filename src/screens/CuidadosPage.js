@@ -47,9 +47,9 @@ class CuidadosPage extends React.Component {
           />
           <Text/>
           <Button
-            title="Sexo"
+            title="Sexualidade"
             //onPress={() => this.props.navigation.navigate('TextMostraSexo')}
-            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Sexo'})}
+            onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Sexualidade'})}
             color="#9268D0"
           />
           <Text/>

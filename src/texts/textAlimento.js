@@ -23,13 +23,14 @@ const TextAlimentos = () => {
           <Text style={styles.textoSubtitulo}>Passo 1 - Faça dos alimentos in natura (naturais) a base 
           da sua alimentação: grãos, raízes, tubérculos, farinhas, legumes, verduras, frutas, castanhas, 
           leite, ovos e carnes, feijão, arroz, milho, batata, tomate, abóbora, laranja, banana, frango e 
-          peixes;</Text>
+          peixes (Figura 3);</Text>
           <Text style={styles.textoSubtitulo}>Passo 2 - Utilize óleos, gorduras, sal e açúcar em pequenas 
           quantidades ao temperar e cozinhar alimentos;</Text>
           <Text style={styles.textoSubtitulo}>Passo 3 - Limite o consumo de alimentos processados: 
-          conservas de legumes, compotas de frutas, pães, queijos, por exemplo;</Text>
+          conservas de legumes, compotas de frutas, pães, queijos, por exemplo (Figura 3);</Text>
            <Text style={styles.textoSubtitulo}>Passo 4 - Evite o consumo de alimentos ultraprocessados, 
-           como: biscoitos recheados, salgadinhos de pacote, refrigerantes ou macarrão instantâneo;</ Text>
+           como: biscoitos recheados, salgadinhos de pacote, refrigerantes ou macarrão instantâneo 
+           (Figura 3);</ Text>
            <Text style={styles.textoSubtitulo}>Passo 5 - Tenha atenção ao fazer uma refeição: alimente-se 
            em ambientes apropriados, e, sempre que possível, em companhia. Faça refeições em horários 
            semelhantes todos os dias e evite “beliscar” nos intervalos das refeições;</ Text>
@@ -52,7 +53,7 @@ const TextAlimentos = () => {
             <Image style={{width: 250, height: 200}} source={require('../../assets/images/alimentos2.png')}/>
             </View>
 
-            <Text style={styles.textoSubtitulo}>ILUSTRAÇÃO: alimento in natura, alimento processado e 
+            <Text style={styles.textoSubtitulo}>Figura 3: alimento in natura, alimento processado e 
             alimento ultraprocessado</Text>
 
         </View>

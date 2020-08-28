@@ -35,12 +35,11 @@ const TextSintomas = () => {
             memória, dificuldades sexuais, rejeição do parceiro, diminuição da libido e insônia 
             (BRASIL, 2016; BRASIL, 2018).</Text>
 
-            <Text style={styles.textoTitulo}>Sintomas permanentes</Text>
-            <Text style={styles.textoSubtitulo}>Os sintomas permanentes consistem em: ressecamento e 
-            sangramento vaginal; dor durante as relações sexuais; dor ao urinar e aumento do número de 
-            vezes que sente vontade de urinar; necessidade urgente de urinar; aumento nos níveis de 
-            gordura e açúcar do sangue (colesterol e triglicerídeos); diminuição das gorduras ”boas” no 
-            sangue (colesterol HDL); fragilidade nos ossos em decorrência das alterações na massa e estrutura 
+            <Text style={styles.textoTitulo}>Sintomas duradouros</Text>
+            <Text style={styles.textoSubtitulo}>Os sintomas duradouros consistem em: ressecamento 
+            vaginal; aumento nos níveis de gordura e açúcar do sangue (colesterol e triglicerídeos); 
+            diminuição das gorduras ”boas” no sangue (colesterol HDL); 
+            fragilidade nos ossos em decorrência das alterações na massa e estrutura 
             que são mais frequentes nos ossos da coluna e colo do fêmur - perna); e acúmulo de gordura na 
             região do abdome (barriga) (BRASIL, 2016; BRASIL, 2018).</Text>
 
@@ -120,7 +119,8 @@ const TextSintomas = () => {
             </View>
 
             <Text style={styles.textoSubtitulo}>Devido à perda da elasticidade dos tecidos da vagina, 
-            pode ocorrer sangramento, dor, diminuição da lubrificação e dificuldade para chegar ao 
+            pode ocorrer sangramento após as relações sexuais, dor, diminuição da lubrificação e 
+            dificuldade para chegar ao 
             orgasmo durante as relações sexuais.</ Text>
 
             <Text style={styles.textoTitulo}>O que fazer?</ Text>
@@ -130,13 +130,6 @@ const TextSintomas = () => {
             <Text style={styles.textoSubtitulo}>•	Aplicar estrogênios (cremes contendo hormônio) na 
             vulva e vagina (partes externa e interna da genitália feminina, respectivamente), conforme 
             prescrição e orientação médica;</ Text>
-            <Text style={styles.textoSubtitulo}>•	O laser vaginal e a radiofrequência são tratamentos 
-            que melhoram os sintomas do ressecamento vaginal na pós-menopausa. São técnicas que causam 
-            pequenas lesões, através do calor nas camadas superficiais da pele, estimulando a produção 
-            de colágeno e melhorando a elasticidade e a resistência dos tecidos da vagina. Estes 
-            tratamentos têm como limitações os custos elevados e a quantidade insuficiente de pesquisas 
-            avaliando os riscos e segurança de seu uso em longo prazo 
-            (ARNOLD; HEHN; KLEIN, 2016; BRASIL, 2018).</ Text>
 
             <Text style={styles.textoTitulo}>3)	Fogachos e suores noturnos 
             (“calorões”)</ Text>

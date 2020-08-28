@@ -96,12 +96,16 @@ class TextMassa extends Component {
         de até 20% na gordura corporal. Manter-se ativa ou em movimento colabora para acelerar o 
         metabolismo e diminuir o ganho de peso (BRASIL, 2010).</Text>
         
+        {/*
         <Text style={styles.textoSubtitulo}>Para saber se seu peso está adequado, calcule seu índice de 
         massa corporal (IMC). </Text>
         
         <Text style={styles.textoSubtitulo}>Clique abaixo e insira sua altura e massa respectivamente: </Text>
         <View style={{padding:10}}>
-  
+        
+        
+        
+        
         <TextInput
             placeholder="Massa (exemplo: 50.5)"
             keyboardType="decimal-pad"
@@ -132,7 +136,7 @@ class TextMassa extends Component {
           {this.state.resultadoTexto}
         </Text>
         </View>
-
+      */}
 
         <View style={styles.tabelaStyleContainer}>
         <Table borderStyle={{borderWidth: 2, borderColor: 'black'}}>
