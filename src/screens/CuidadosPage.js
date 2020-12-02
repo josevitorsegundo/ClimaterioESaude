@@ -66,9 +66,17 @@ class CuidadosPage extends React.Component {
             color="#9268D0"
           />
 
+          <Text/>
+          <Button
+            title="Lembretes"
+            onPress={() => this.props.navigation.navigate('Lembretes')}
+            //onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Terapias'})}
+            color="#9268D0"
+          />
+
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text></Text>
-            <Image style={{width: 200, height: 200}} source={require('../../assets/homeT.png')}/>
+            <Image style={{width: 200, height: 200}} source={require('../../assets/icon3.png')}/>
           </View>
 
           </View>

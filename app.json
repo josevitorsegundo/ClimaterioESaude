@@ -10,7 +10,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon3.png",
+    "icon": "./assets/homeT.png",
     "splash": {
       "image": "./assets/icon3.png",
       "resizeMode": "contain",

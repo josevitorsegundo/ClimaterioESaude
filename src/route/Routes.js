@@ -10,6 +10,7 @@ import CuidadosPage from '../screens/CuidadosPage';
 import ChamaTextGeral from '../screens/ChamaTextGeral';
 import EstiloVida from '../screens/ChamaEstiloVida';
 import ChamaCalendario from '../screens/ChamaCalendario';
+import ChamaLembretes from '../screens/ChamaLembretes';
 
 //var {width} = Dimensions.get('window');
 
@@ -19,6 +20,7 @@ const RootStackG = createStackNavigator({
   Estilo: EstiloVida,
   Diário: ChamaCalendario,
   Notas: ChamaDiario,
+  Lembretes: ChamaLembretes,
 },
 {
   defaultNavigationOptions: {
