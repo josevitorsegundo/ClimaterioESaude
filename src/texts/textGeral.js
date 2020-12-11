@@ -12,6 +12,7 @@ import TextSaudeBucal from './textSaudeBucal';
 import TextSexo from './textSexo';
 import TextTerapias from './textTerapias';
 import TextSono from './textSono';
+import TextFaleConosco from './textFaleConosco';
 
 const TextGeral = ({ind}) => {
     const tela = (
@@ -26,6 +27,7 @@ const TextGeral = ({ind}) => {
       ind === 'Estilo de Vida Saudável' ? <TextEstilo/> :
       ind === 'Climatério e Menopausa' ? <TextClimaterioMenopausa/> :
       ind === 'Cuidados com o Sono' ? <TextSono/> :
+      ind === 'Fale conosco' ? <TextFaleConosco/>:
       //ind === 'Diário' ? this.props.navigation.navigate('Diário') :
         null
     )
