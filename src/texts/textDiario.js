@@ -27,7 +27,7 @@ class TextDiario extends Component {
   verifLengthText = (text) =>{
     this.setState({ entrada: text })
     if(String(text).length === 4000){
-      alert("Tamanho Maximo Atingido")
+      Alert.alert("Aviso","Tamanho Maximo Atingido")
     }else{
       var pages = this.state.pages
       pages[this.state.page].info = text
