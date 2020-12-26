@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, Button, View, ScrollView, TextInput} from 'react-native';
-import RNPickerSelect from 'react-native-picker-select';
+import RNPickerSelect from 'react-native-picker-select'; // remover senão der certo
+import {Picker} from '@react-native-picker/picker';
 import email from 'react-native-email';
 import styles from '../styles/stylesText';
  
 class TextFaleConosco extends React.Component {
-    
+    /** 
     state ={
         email: "",
         categoria : [
@@ -22,7 +23,7 @@ class TextFaleConosco extends React.Component {
                 value: 'sugRecl',
             },
         ]
-    };
+    };*/
 
     constructor(props){
         super(props);
@@ -30,6 +31,10 @@ class TextFaleConosco extends React.Component {
         this.values = {
            tipoValue: undefined, 
         }
+    };
+
+    state = {
+                language: 'java',
     };
 
     render() {
@@ -52,18 +57,16 @@ class TextFaleConosco extends React.Component {
 
             <Text></Text>
             <Text style={styles.textoSubtitulo}>Tipo</Text>
-            <RNPickerSelect
-            placeholder={{}}
-                items={this.state.categoria}
-                onValueChange={value => {
-                this.setState({
-                    tipoValue: value,
-                });
-                }}
-                InputAccessoryView={() => null}
-               /* style={pickerSelectStyles}*/
-                value={this.state.tipoValue}
-            />
+            
+            <Picker
+                selectedValue={this.state.language}
+                style={{height: 50, width: 100}}
+                onValueChange={(itemValue, itemIndex) =>
+                    this.setState({language: itemValue})
+                }>
+                <Picker.Item label="Java" value="java" />
+                <Picker.Item label="JavaScript" value="js" />
+            </Picker>
 
             <Text></Text>
 

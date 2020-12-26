@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { Text, View, ScrollView, Image, Button } from 'react-native';
 import styles from '../styles/stylesText';
+
+import * as SimpleAlarm from "../helpers";
+export * from "../helpers";
+
+//import SimpleAlarm from '../screens/chamaLembreteAlarm';
+
 //expot em App e chamar tela no Button Cuidados
 
 {/*
@@ -109,7 +115,7 @@ _deleteAllAlarms = async () => {
 
 
 class TextLembretes extends Component {
-    
+    /** */
     _createAlarm = async () => {
         try {
           await createAlarm({
@@ -153,6 +159,7 @@ class TextLembretes extends Component {
                 <Button
                 title="Criar Alarme"
                 onPress={() => this._createAlarm()}
+                //onPress={<SimpleAlarm/>}
                 color="#9268D0"
                 />
 
