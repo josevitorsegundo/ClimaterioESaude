@@ -3,7 +3,6 @@
     "name": "Climatério e Saúde",
     "slug": "projetoExpo1",
     "privacy": "public",
-    "sdkVersion": "38.0.0",
     "platforms": [
       "ios",
       "android"
@@ -27,7 +26,7 @@
       "bundleIdentifier": "com.devUFPI.climaterioesaude",
       "buildNumber": "1.0.3"
     },
-    "android":{
+    "android": {
       "package": "com.devUFPI.climaterioesaude",
       "versionCode": 1
     }
