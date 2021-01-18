@@ -12,10 +12,6 @@ class EstiloVida extends React.Component {
         };
       };
     render() {
-        const { navigation } = this.props;
-        const itemId = navigation.getParam('itemId', 'NO-ID'); 
-        const otherParam = navigation.getParam('otherParam', 'some default value');
-
         return (
             <ScrollView>
                 <TextEstilo/>
@@ -24,25 +20,25 @@ class EstiloVida extends React.Component {
                 
                 <Button
                 title="Atividade Física"
-                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Atividade Física'})}
+                onPress={() => this.props.navigation.navigate('Atividade Física')}
                 color="#9268D0"
                 />
                 <Text/>
                 <Button
                 title="Alimentação"
-                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Alimentação'})}
+                onPress={() => this.props.navigation.navigate('Alimentação')}
                 color="#9268D0"
                 />
                 <Text/>
                 <Button
                 title="Índice de Massa Corporal"
-                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Índice de Massa Corporal'})}
+                onPress={() => this.props.navigation.navigate('Índice de Massa Corporal')}
                 color="#9268D0"
                 />
                 <Text/>
                 <Button
                 title="Cuidados com o Sono"
-                onPress={() => this.props.navigation.navigate('TextMostraGeral', {nome: 'Cuidados com o Sono'})}
+                onPress={() => this.props.navigation.navigate('Cuidados com o sono')}
                 color="#9268D0"
                 />
 
