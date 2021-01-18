@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import Routes from "./src/route/Routes";
+
+//import RoutesOld from "./src/route/RoutesOld";
+import RoutesS from "./src/route/Routes";
+
 import { YellowBox } from 'react-native';
 
 YellowBox.ignoreWarnings(['Accessing view manager']);
@@ -12,7 +15,7 @@ YellowBox.ignoreWarnings(['YellowBox']);
 export default class App extends Component {
   render() {
     return (
-      <Routes/>
+      <RoutesS/>
     );
   }
 }
