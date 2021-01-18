@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, Button, View, ScrollView, TextInput, Alert} from 'react-native';
-import RNPickerSelect from 'react-native-picker-select'; // remover senão der certo
 import {Picker} from '@react-native-picker/picker';
 import email from 'react-native-email';
 import styles from '../styles/stylesText';
@@ -97,7 +96,10 @@ class TextFaleConosco extends React.Component {
     }
  
     handleEmail = () => {
-        //this.verificaTipo(this.state.tipo)
+        
+        
+        // E-mail não pode ser Null
+        // Mensagem com no minimo 3 caracteres
 
         var valorTipo1 = "null"
         if (this.state.tipo == "duvida"){

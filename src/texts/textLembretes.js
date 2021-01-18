@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { Text, View, ScrollView, Image, Button } from 'react-native';
 import styles from '../styles/stylesText';
-
-
+import Home from '../example1/Home/Home';
 
 //expot em App e chamar tela no Button Cuidados
 
@@ -40,6 +39,8 @@ class TextLembretes extends Component {
                 <Text style={styles.textoTitulo}>Mamografia e Papanicolau:</Text>
                 <Text style={styles.textoSubtitulo}>• ***</Text>
 
+                <Home/>
+
                 <Button
                 title="Criar Alarme"
                 //onPress={() => this._createAlarm()}
@@ -47,12 +48,12 @@ class TextLembretes extends Component {
                 color="#9268D0"
                 />
 
-
+                {/**
                 <Text style={styles.textoTitulo}>Medicamentos:</Text>
                 <Text style={styles.textoSubtitulo}>• ***</ Text>
 
 
-                <Text style={styles.textoSubtitulo}>1</ Text>
+                <Text style={styles.textoSubtitulo}>1</ Text>*/}
 
             </View>
             </ScrollView>
