@@ -35,7 +35,7 @@ export default class NavBar extends Component {
     } else if (leftButtonIcon === 'menu') {
       icon = (
         <Image
-          source={require('../../assets/images/menuIcon.png')}
+          source={require('../../../assets/imagesLemb/menuIcon.png')}
           style={{
             marginRight: Convert(8),
             height: Convert(16),
@@ -76,7 +76,7 @@ export default class NavBar extends Component {
     } else if (rightButtonIcon === 'close') {
       icon = (
         <Image
-          source={require('../../assets/images/buttonClose.png')}
+          source={require('../../../assets/imagesLemb/buttonClose.png')}
           style={{
             width: Convert(18),
             height: Convert(18),

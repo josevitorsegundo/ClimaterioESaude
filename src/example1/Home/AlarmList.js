@@ -7,6 +7,7 @@ import {
   Image,
   View,
   TouchableOpacity,
+  FlatList,
   StyleSheet,
 } from 'react-native';
 import {SwipeListView} from 'react-native-swipe-list-view';
@@ -143,7 +144,7 @@ class AlarmList extends Component {
                   height: Convert(60),
                   width: Convert(60),
                 }}
-                source={require('../../assets/images/trash.png')}
+                source={require('../../../assets/imagesLemb/trash.png')} 
               />
             </TouchableOpacity>
           </View>

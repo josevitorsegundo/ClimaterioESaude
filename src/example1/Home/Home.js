@@ -14,13 +14,16 @@ const Home = () => {
   return (
     <View style={{display: 'flex', flex: 1}}>
       <NavBar
-        title="Alarms"
+        title="Alarmes"
         rightButtonIcon="plus"
+        /* Button add Alarms**/
         onRightButtonPress={handleAddAlarm}
       />
 
       <SafeAreaView style={{display: 'flex', flex: 1}}>
+        {/**List Alarms*/}
         <AlarmList />
+
       </SafeAreaView>
     </View>
   );
