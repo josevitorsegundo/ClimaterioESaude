@@ -18,7 +18,7 @@
     "expo": "^40.0.0",
     "expo-facebook": "^9.1.0",
     "firebase": "^8.2.3",
-    "lodash": " >=4.17.19 ",
+    "lodash": ">=4.17.21",
     "logkitty": ">=0.7.1",
     "mem": ">=4.0.0",
     "minimist": ">=1.2.3",
