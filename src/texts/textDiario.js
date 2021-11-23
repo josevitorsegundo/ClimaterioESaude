@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView, TextInput, Dimensions, Button, Alert } from 'react-native';
 import styles from '../styles/stylesText';
-import {AsyncStorage} from 'react-native';
+
+//import {AsyncStorage} from 'react-native'; //old
+import {AsyncStorage} from '@react-native-async-storage/async-storage';
 
 //Funcionalidade 1: ter alarme com data definida pelo usuário
 //Funcionalidade 2: ter diário para escrever de acordo com definido pelo usuário

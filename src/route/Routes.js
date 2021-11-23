@@ -26,9 +26,6 @@ import TextTerapias from '../texts/textTerapias';
 import TextFaleConosco from '../texts/textFaleConosco';
 import TextLembretes from '../texts/textLembretes';
 
-//Teste Login
-import Login from '../utils/login';
-
 //Import of the Screens Stack C - EstiloVida
 import EstiloVida from '../screens/ChamaEstiloVida';
 import TextAtividadeFisica from '../texts/textAtividaFisica';
@@ -71,7 +68,6 @@ function MyStackC({ navigation }) {
     
     <StackC.Screen name="Lembretes" component={TextLembretes}/>
     <StackC.Screen name="Fale Conosco" component={TextFaleConosco}/>
-    <StackC.Screen name="Login" component={Login}/>
 
     </StackC.Navigator>
   );

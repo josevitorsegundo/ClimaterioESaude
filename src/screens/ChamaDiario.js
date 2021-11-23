@@ -21,7 +21,7 @@ class  ChamaDiario extends React.Component {
     };
     
     render() {
-      return (
+      return (        
         <TextDiario date={date}/>
       );
     }

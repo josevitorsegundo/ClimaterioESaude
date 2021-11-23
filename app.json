@@ -23,12 +23,13 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.devUFPI.climaterioesaude",
+      "bundleIdentifier": "com.devUFPI.projectClimaterioESaude",
       "buildNumber": "1.0.3"
     },
     "android": {
-      "package": "com.devUFPI.climaterioesaude",
-      "versionCode": 1
+      "package": "com.devUFPI.projectClimaterioESaude",
+      "versionCode": 3,
+      "permissions":[]
     }
   }
 }
