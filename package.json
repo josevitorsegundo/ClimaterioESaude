@@ -21,7 +21,7 @@
     "lodash": " >=4.17.19 ",
     "logkitty": ">=0.7.1",
     "mem": ">=4.0.0",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "moment": "^2.29.1",
     "native-base": "^2.15.2",
     "react": "16.13.1",
